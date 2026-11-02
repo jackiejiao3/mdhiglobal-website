@@ -57,9 +57,12 @@ div {
 <style>
 /* Gallery-only layout: a single background and aligned sections. */
 .gallery-content { background: #fff; padding: 48px 0 56px; }
+.gallery-content .gallery-page-header { margin-bottom: 40px; padding-bottom: 32px; border-bottom: 1px solid #e7e7e7; text-align: left; }
+.gallery-content .gallery-page-title { margin: 0 0 18px; padding: 0; color: #162f46; font-size: 42px; line-height: 1.2; font-weight: 700; }
+.gallery-content .gallery-page-header p { max-width: 850px; margin-bottom: 0; font-size: 18px; }
 .gallery-content .gallery-section { text-align: left; }
 .gallery-content .gallery-section + .gallery-section { margin-top: 40px; padding-top: 40px; border-top: 1px solid #e7e7e7; }
-.gallery-content .gallery-heading { margin: 0 0 22px; padding: 0; color: #162f46; font-size: 30px; line-height: 1.25; font-weight: 700; }
+.gallery-content .gallery-heading { margin: 0 0 22px; padding: 0; color: #162f46; font-size: 26px; line-height: 1.25; font-weight: 700; }
 .gallery-content .gallery-subheading { margin: 0 0 14px; font-size: 22px; line-height: 1.4; }
 .gallery-content p { margin: 0 0 16px; font-size: 16px; line-height: 1.7; }
 .gallery-content .gallery-note { margin-bottom: 0; color: #666; font-size: 14px; }
@@ -70,7 +73,10 @@ div {
 @media (max-width: 767px) {
   .gallery-content { padding: 32px 0 36px; }
   .gallery-content .gallery-section + .gallery-section { margin-top: 28px; padding-top: 28px; }
-  .gallery-content .gallery-heading { font-size: 25px; margin-bottom: 18px; }
+  .gallery-content .gallery-page-header { margin-bottom: 28px; padding-bottom: 24px; }
+  .gallery-content .gallery-page-title { font-size: 34px; }
+  .gallery-content .gallery-page-header p { font-size: 16px; }
+  .gallery-content .gallery-heading { font-size: 23px; margin-bottom: 18px; }
 }
 </style>
 </head>
@@ -264,6 +270,10 @@ div {
 
 <main class="gallery-content">
   <div class="container">
+    <header class="gallery-page-header">
+      <h1 class="gallery-page-title">GALLERY</h1>
+      <p>Explore our brochure, company video and product infographics to learn more about our capabilities, facilities and manufacturing processes.</p>
+    </header>
     <section class="gallery-section" id="brochure" aria-labelledby="brochure-heading">
       <h2 id="brochure-heading" class="gallery-heading">BROCHURE</h2>
       <h3 class="gallery-subheading"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Modern Group 2025 Brochure</h3>
@@ -281,7 +291,7 @@ div {
     </section>
 
     <section class="gallery-section" id="product-infographs" aria-labelledby="product-infographs-heading">
-      <h2 id="product-infographs-heading" class="gallery-heading">Product infographs</h2>
+      <h2 id="product-infographs-heading" class="gallery-heading">PRODUCT INFOGRAPHICS</h2>
       <p class="gallery-intro">Explore our facilities, materials and manufacturing processes. Select a topic below to view its infographic.</p>
       <div class="no padding">
 		<div class="btn-group" style="width:100%">
