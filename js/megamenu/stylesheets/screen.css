@@ -191,7 +191,7 @@
 .header-section ul li a { cursor:pointer; position:relative;
   color: #cc9933;
   /*background: none !important;*/
-  padding: 30px 14px 30px 10px;
+  padding: 30px 21px 30px 16px;
   text-decoration: none !important;
   white-space: nowrap;
 }
@@ -201,7 +201,7 @@
 .header-section ul li a:before {
     content: '';
     position: absolute;
-    right:3px;
+    right:10px;
     margin-top:-2.5px ;
     top:50%;
     display: block;
@@ -1588,7 +1588,7 @@ box-shadow: 0px 3px 18px 0px rgba(0,0,0,0.07);
 
 @media only screen and (min-width: 991px) and (max-width: 1169px){
 .header-section ul li a {
-  padding: 30px 13px 30px 8px;
+  padding: 30px 9px;
 }
 
 /* 窄桌面区：压缩 logo 列占比，确保 8 个菜单项并排一行 */
