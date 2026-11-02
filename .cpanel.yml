@@ -1,0 +1,4 @@
+---
+deployment:
+  tasks:
+    - /bin/bash /home1/mdhiglob/repositories/mdhiglobal-website/deploy/deploy.sh
