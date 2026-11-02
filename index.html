@@ -124,6 +124,18 @@
 </style>  
 
 <link rel="stylesheet" href="css/group-header.css">
+<style>
+/* Homepage review only: MMEC uses 10px top/bottom padding and a 28px control row. */
+.topbar.home-topbar-preview { padding: 10px 0; }
+.topbar.home-topbar-preview .less4 { min-height: 28px; }
+.topbar.home-topbar-preview .less4 > div { padding-top: 0; padding-bottom: 0; }
+.topbar.home-topbar-preview ul.right { padding-top: 0; padding-bottom: 0; min-height: 28px; }
+.topbar.home-topbar-preview h6 { margin-top: 0; margin-bottom: 0; line-height: 18px; }
+.topbar.home-topbar-preview a.modern-group-link { box-sizing: border-box; min-height: 28px; padding: 4px 11px; font-size: 12px; line-height: 18px; }
+@media (max-width: 990px) {
+  .topbar.home-topbar-preview .less4 { gap: 8px; }
+}
+</style>
 </head>
 
 
@@ -134,7 +146,7 @@
 <h1 class="sr-only">Structural Steel Fabrication & Modular Construction | Modern Heavy Industries (MDHI)</h1>
 
 
-<div class="topbar bg-color-yellow">
+<div class="topbar bg-color-yellow home-topbar-preview">
 
 <div class="row nopadding">
 
@@ -164,8 +176,9 @@
 
               
 
-              <li><h6 class="small2 margin-top1 font-weight4 margin-right2"><a href="mailto:info@mdhiglobal.com" class="sty4"><i class="fa fa-envelope"></i>&nbsp; info@mdhiglobal.com</a></h6></li>
               <li><a class="modern-group-link" href="https://modernhig.com/" target="_blank" rel="noopener noreferrer">Modern Group <span aria-hidden="true">&#8599;</span></a></li>
+              <li><h6 class="small2 margin-top1 font-weight4 margin-right2"><a href="mailto:info@mdhiglobal.com" class="sty4"><i class="fa fa-envelope"></i>&nbsp; info@mdhiglobal.com</a></h6></li>
+              
 
               <li><a href="https://www.facebook.com/modernheavy/"><i class="fa fa-facebook icon-border-gray size5" aria-hidden="true"></i></a></li>
 
