@@ -1,0 +1,18 @@
+/* Shared topbar only; main navigation retains its existing layout. */
+.topbar .less4 { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.topbar .less4 > div:first-child { flex: 1 1 auto; width: auto; }
+.topbar .less4 > div:last-child { flex: 0 1 auto; width: auto; }
+.topbar ul.right { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 8px; float: none; }
+.topbar ul.right > li { float: none; margin: 0; }
+.topbar ul.right h6 { margin: 0 6px 0 0; }
+.topbar a.modern-group-link { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 8px 13px; border: 1px solid #162f46; border-radius: 3px; background: #162f46; color: #fff; font: 600 13px/1.2 'Open Sans', sans-serif; white-space: nowrap; text-decoration: none; transition: background .2s, color .2s; }
+.topbar a.modern-group-link:hover, .topbar a.modern-group-link:focus { background: #fff; color: #162f46; }
+.topbar a.modern-group-link:focus-visible { outline: 2px solid #162f46; outline-offset: 3px; }
+@media (max-width: 990px) {
+  .topbar .less4 { flex-wrap: wrap; gap: 0; }
+  .topbar .less4 > div:first-child, .topbar .less4 > div:last-child { flex: 1 1 100%; width: 100%; text-align: center; }
+  .topbar .less4 > div:first-child { padding-top: 10px; padding-bottom: 0; }
+  .topbar .less4 > div:first-child ul { text-align: center; }
+  .topbar .less4 > div:first-child li { float: none; display: inline-block; }
+  .topbar ul.right { justify-content: center; padding-top: 10px; padding-bottom: 10px; }
+}
