@@ -1,0 +1,77 @@
+.tooltip{ 
+  position:relative;
+  float:right;
+  
+}
+
+.tooltip > .tooltip-inner {background-color: #fbc942; padding:3px 3px; color:rgb(29,32,37); font-weight:bold; font-size:12px; color: #000;}
+.popOver + .tooltip > .tooltip-arrow {	border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 5px solid #cc0033;}
+
+
+.progress{
+  border-radius:0;
+  overflow:visible;
+  height: 8px;
+}
+.progress-bar{
+	height: 8px;
+	
+	-webkit-transition: width 1.5s ease-in-out;
+	transition: width 1.5s ease-in-out;
+	-webkit-transition-delay: 2s;
+	transition-delay: 2s;
+}
+
+.barWrapper {
+	margin-bottom: 30px;
+}
+
+
+.titulo {
+  font-family:"Montserrat"; 
+  font-size:20px; 
+  text-align:center; 
+  color:#999;
+}
+.barras {
+  width: 100%;
+  margin:10px auto;
+}
+.barra {
+  width:100%;
+  height:17px; 
+  background:#f3f3f3; 
+  margin:0px 0px 18px 0px;
+}
+.barra-nivel {
+  height:17px; 
+  background:#727272;
+  width:1px;
+  -webkit-transition: width 1s ease;
+  -moz-transition: width 1s ease;
+  transition: width 1s ease;
+}
+.valor-nivel {
+  line-height:16px; 
+  color:#fff; 
+  margin-right:14px; 
+  font-family:"Montserrat"; 
+  font-size:12px;
+  float: right;
+}
+
+
+.circleGraphic1,
+.circleGraphic2,
+.circleGraphic3,
+.circleGraphic4,
+.circleGraphic5,
+.circleGraphic6,
+.circleGraphic7,
+.circleGraphic8,
+.circleGraphic9,
+.circleGraphic10,
+.circleGraphic11,
+.circleGraphic12 {
+	font-size: 0px;
+}

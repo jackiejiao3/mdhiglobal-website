@@ -1,0 +1,78 @@
+.da-thumbs {
+	list-style: none;
+	width: 90%;
+	position: relative;
+	margin: 0px auto;
+	padding: 0;
+}
+.da-thumbs li {
+	float: left;
+	width: 24%;
+	margin: 0.5%;
+	background: #fff;
+	padding: 0px;
+	position: relative;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.da-thumbs li a,
+.da-thumbs li a img {
+	display: block;
+	position: relative;
+}
+.da-thumbs li a {
+	overflow: hidden;
+}
+.da-thumbs li a div {
+	position: absolute;
+	background: #333;
+	background: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 100%;
+}
+.da-thumbs li a div span {
+	display: block;
+	padding: 35% 20% 20% 20%;
+
+}
+
+
+.da-thumbs li a div {
+	top: 0px;
+	left: -100%;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.da-thumbs li a:hover div{
+	left: 0px;
+}
+
+
+
+@media only screen and (max-width: 990px){
+	
+.da-thumbs {
+	width: 100%;
+}
+.da-thumbs li {
+	width: 49%;
+}
+
+}
+
+@media only screen and (max-width: 480px){
+	
+.da-thumbs {
+	width: 100%;
+}
+.da-thumbs li {
+	width: 100%;
+	margin: 0;
+}
+
+}
+
+
+

@@ -1,0 +1,544 @@
+
+/* suyee 2018.11.24 Add 开始*/
+.padding-1 {
+    padding: 1px 0 !important;
+}
+
+.MDHI_Map {
+    width: 100%;
+    max-width: 1920px;
+    max-height: 1029px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.MDHI_Map img.datu {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+.MDHI_ID {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-top: 25px;
+    width: 100%;
+    z-index: 99;
+}
+
+ul.MDHI_ID_left {
+    float: left;
+    width: 250px;
+}
+
+ul.MDHI_Right {
+    float: right !important;
+}
+
+ul.MDHI_ID_left li {
+    display: block;
+    float: left;
+    padding: 2%;
+    width: 96%;
+    position: relative;
+    margin-bottom: 10px;
+    background: rgba(122, 190, 211, 0.8);
+    box-shadow: -3px 3px 9px #fff;
+    border-radius: 5px;
+}
+
+ul.MDHI_ID_left li a {
+    font-size: 16px;
+    color: #333;
+}
+
+ul.MDHI_ID_left li a i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    margin-top: -15px;
+    color: #FFF;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background: #F00;
+    font-style: normal;
+    text-align: center;
+    line-height: 30px;
+}
+
+ul.MDHI_ID_left li a p {
+    font-size: 15px;
+    color: #111;
+    padding-left: 50px;
+    line-height: 22px;
+    min-height: 66px;
+    text-decoration: none;
+}
+
+ul.MDHI_ID_left li a:hover p {
+    text-decoration: underline;
+}
+.modal {    z-index: 9999 !important;}
+.modal-body img{ text-align:center; max-width:100%;}
+
+.container {
+    text-align: left !important;
+}
+.bg-color-qq {
+    background-color: #FcFcFc;
+}
+
+h3.hhh-qq {
+    text-align: center;
+    padding: 50px 0 30px 0;
+}
+
+ul.ziliao {
+    width: 100%;
+    float: left;
+}
+
+ul.ziliao li {
+    display: block;
+    float: left;
+    text-align: left;
+    width: 49%;
+    margin: 0.5%;
+    background-color: #F2F2F2;
+
+}
+
+ul.ziliao li p,
+ul.ziliao li h2 {
+    display: block;
+    float: left;
+}
+
+ul.ziliao li p.datu {
+    width: 27%;
+    margin-right: 3%;
+    overflow: hidden;
+}
+
+ul.ziliao li p.datu img {
+    width: 100%;
+}
+
+ul.ziliao li h2 {
+    position: relative;
+    width: 70%;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 45px;
+    color: #333;
+}
+
+ul.ziliao li h2:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 35px;
+    height: 2px;
+    overflow: hidden;
+    background-color: #cc9933;
+}
+
+ul.ziliao li p.infor_txt {
+    width: 70%;
+    font-size: 14px;
+    line-height: 24px;
+    color: #666;
+    margin-bottom: 5px;
+    max-height: 96px;
+}
+
+ul.ziliao li span.anniu {
+    display: block;
+    float: left;
+    padding: 5px 15px;
+    font: normal 14px/26px Arial, "宋体";
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    border-radius: 3px 3px 3px 3px;
+    border: #cc9933 2px solid;
+    background-color: #cc9933;
+    color: #FFF;
+    -moz-transition: color 0.4s ease 0s;
+    -webkit-transition: color 0.4s ease 0s;
+    -o-transition: color 0.4s ease 0s;
+    transition: color 0.4s ease 0s;
+    white-space: nowrap;
+}
+
+ul.ziliao li span.anniu:hover {
+    background-color: #FFF;
+    color: #cc9933;
+}
+
+ul.Video_list {
+    width: 100%;
+    float: left;
+}
+
+ul.Video_list li {
+    display: block;
+    float: left;
+    text-align: left;
+    width: 49%;
+    margin: 0.5%;
+    background-color: #FcFcFc;
+    position: relative;
+}
+
+ul.Video_list li video {
+    background: url(../images/no1.jpg) no-repeat center center #000;
+}
+
+ul.Video_list li h2 {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 45px;
+    color: #333;
+    padding: 0 25px;
+    position: relative;
+}
+
+ul.Video_list li h2:before {
+    content: "";
+    position: absolute;
+    left: 25px;
+    bottom: 2px;
+    width: 35px;
+    height: 2px;
+    overflow: hidden;
+    background-color: #cc9933;
+}
+
+ul.Video_list li p {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 25px;
+    color: #666;
+    padding: 0 25px;
+}
+
+@media screen and (max-width: 800px) {
+    .MDHI_ID {
+        position: relative;
+        left: inherit;
+        top: inherit;
+        padding-top: 10px;
+        width: 100%;
+        z-index: auto;
+        float: left;
+    }
+
+    ul.MDHI_ID_left {
+        width: 49%;
+        margin: 0 0.5%;
+    }
+
+    ul.MDHI_ID_left li a p {
+        font-size: 13px;
+        padding-left: 50px;
+    }
+
+    ul.ziliao li {
+        width: 99%;
+    }
+
+    ul.Video_list li {
+        width: 99%;
+    }
+}
+
+/* suyee 2018.11.24 Add 结束*/
+
+
+/* gallery 2018.11.25 Add 结束*/
+.gallery{
+    padding:4em 0;
+}
+
+
+@media(max-width:480px) {
+    .gallery {
+        padding: 2em 0;
+    }
+}
+@media(max-width:991px){
+    .gallery-grid {
+        width: 50%;
+        float: left;
+    }
+}
+@media(max-width:414px){
+    .gallery-grid {
+        width: 50%;
+        float: none;
+    }
+}
+
+/*-- gallery --*/
+.grid {
+    position: relative;
+    clear: both;
+    margin: 0 auto;
+    max-width: 1000px;
+    list-style: none;
+    text-align: center;
+}
+
+/* Common style */
+.grid figure {
+    position: relative;
+    overflow: hidden;
+    margin: 10px 0;
+    height: auto;
+    text-align: center;
+    cursor: pointer;
+}
+
+.grid figure img {
+    position: relative;
+    display: block;
+    min-height: 100%;
+    width: 100%;
+    opacity: 0.8;
+}
+
+.grid figure figcaption {
+    padding: 2em;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+    pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+}
+
+.grid figure h3 {
+    color: #bda16d;
+    word-spacing: -0.15em;
+    font-weight: 300;
+    margin: 0 0 .5em 0;
+    text-align: left;
+    font-size: 1.5em;
+    font-family: 'Raleway', sans-serif;
+}
+
+.grid figure h2 span {
+    font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+    margin: 0;
+}
+
+.grid figure p {
+    letter-spacing: 1px;
+    font-size: 68.5%;
+}
+.grid figure h3 span {
+    font-weight: 800;
+}
+/*---------------*/
+/***** Roxy *****/
+/*---------------*/
+
+figure.effect-roxy {
+    background: -webkit-linear-gradient(45deg, #ff89e9 0%, #05abe0 100%);
+    background: linear-gradient(45deg, #ff89e9 0%,#05abe0 100%);
+}
+
+figure.effect-roxy img {
+    max-width: none;
+    width: -webkit-calc(100% + 60px);
+    width: calc(100% + 60px);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-50px,0,0);
+    transform: translate3d(-50px,0,0);
+}
+
+figure.effect-roxy figcaption::before {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    border: 1px solid #fff;
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-20px,0,0);
+    transform: translate3d(-20px,-20px,0px);
+}
+
+figure.effect-roxy figcaption {
+    padding: 2em;
+    text-align: left;
+}
+
+figure.effect-roxy h2 {
+    padding: 30% 0 10px 0;
+}
+
+figure.effect-roxy p {
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-10px,0,0);
+    transform: translate3d(-10px,0,0);
+    line-height: 1.8em;
+}
+
+figure.effect-roxy:hover img {
+    opacity: 0.7;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+figure.effect-roxy:hover figcaption::before,
+figure.effect-roxy:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    line-height: 1.8em;
+}
+/*-- gallery --*/
+
+
+
+ul.news-list {
+    width: 100%;
+    float: left;
+}
+
+ul.news-list li {
+    display: block;
+    float: left;
+    width: 100%;
+    margin-bottom: 1.5%; 
+}
+
+ul.news-list li p,
+ul.news-list li span {
+    display: block;
+    float: left;
+}
+
+ul.news-list li p.datu {
+    width: 47%;
+    margin-right: 3%;
+    overflow: hidden;
+}
+
+ul.news-list li p.datu img {
+    width: 100%;
+}
+
+ul.news-list li span {
+    position: relative;
+    width: 50%;
+    font-size: 13px; line-height:20px; height:60px; overflow:hidden;
+    font-weight: normal;
+}
+
+ul.news-list li span:before {
+    content: "";
+    position: absolute;
+    left: 0;
+/*    bottom: 2px;
+    width: 35px;
+    height: 2px;
+    overflow: hidden;
+    background-color: #cc9933;*/
+}
+
+
+/* 留言页面样式 开始*/
+
+ul.feedbackQQ {
+    width: 100%;
+    float: left;
+}
+
+ul.feedbackQQ li {
+    display: block;
+    float: left;
+    text-align: left;
+    width: 98%;
+    margin: 0.5% 0; padding:2px;
+   /* background-color: #FFF;*/
+}
+ul.feedbackQQ li:hover{
+   /* background-color: #FcFcFc;*/
+}
+
+.inputtxt{ padding:0 5px;
+    line-height: 32px;min-height: 32px;
+    border: 1px solid #d9d9d9;
+    color: #808080;
+    background: #f8f8f8;
+	 }
+	 
+.inputent{ width:70%; height:96px;}
+.inputcode{ width:65px;}
+.tijiao{
+	 background-color:#ff9933;
+	 padding:0 20px;
+	border: none;
+	cursor:pointer;
+	margin:0;
+	font: normal 14px/35px "微软雅黑", "宋体"; color:#FFF;
+}
+.tijiao:hover{
+	 background-color:#ff5e00;
+ color:#FFF;
+}
+/* 留言页面样式 结束*/
+@media (min-width:1440px) {
+  .modal-lg {
+    width: 1200px !important;
+  }
+}
+@media (min-width:1680px) {
+  .modal-lg {
+    width: 1400px !important;
+  }
+}
+
+
+
+
