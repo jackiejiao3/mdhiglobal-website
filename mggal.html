@@ -53,6 +53,26 @@ div {
     <link rel="stylesheet" type="text/css" href="js/progressbar/pbar.css">
     
      
+
+<style>
+/* Gallery-only layout: a single background and aligned sections. */
+.gallery-content { background: #fff; padding: 48px 0 56px; }
+.gallery-content .gallery-section { text-align: left; }
+.gallery-content .gallery-section + .gallery-section { margin-top: 40px; padding-top: 40px; border-top: 1px solid #e7e7e7; }
+.gallery-content .gallery-heading { margin: 0 0 22px; padding: 0; color: #162f46; font-size: 30px; line-height: 1.25; font-weight: 700; }
+.gallery-content .gallery-subheading { margin: 0 0 14px; font-size: 22px; line-height: 1.4; }
+.gallery-content p { margin: 0 0 16px; font-size: 16px; line-height: 1.7; }
+.gallery-content .gallery-note { margin-bottom: 0; color: #666; font-size: 14px; }
+.gallery-content .gallery-download { display: inline-block; padding: 11px 20px; background: #162f46; color: #fff; border-radius: 2px; }
+.gallery-content .gallery-download:hover, .gallery-content .gallery-download:focus { background: #cc9933; color: #fff; }
+.gallery-content .gallery-video { margin-top: 24px; }
+.gallery-content .gallery-intro { margin-bottom: 28px; }
+@media (max-width: 767px) {
+  .gallery-content { padding: 32px 0 36px; }
+  .gallery-content .gallery-section + .gallery-section { margin-top: 28px; padding-top: 28px; }
+  .gallery-content .gallery-heading { font-size: 25px; margin-bottom: 18px; }
+}
+</style>
 </head>
 
 
@@ -242,60 +262,28 @@ div {
 
 <div class="clearfix"></div>
 
-<section class="padding-top-bottom4" style="background-color: #f7f7f7;">
-<div class="container">
-<div class="row">
+<main class="gallery-content">
+  <div class="container">
+    <section class="gallery-section" id="brochure" aria-labelledby="brochure-heading">
+      <h2 id="brochure-heading" class="gallery-heading">BROCHURE</h2>
+      <h3 class="gallery-subheading"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Modern Group 2025 Brochure</h3>
+      <p>Download a medium-quality PDF of our brochure.</p>
+      <p><a class="gallery-download" href="/mg25.pdf"><i class="fa fa-download" aria-hidden="true"></i> Download brochure</a></p>
+      <p class="gallery-note">Contact us if you need a high-quality PDF version of our brochure.</p>
+    </section>
 
-<div class="white-box-shadow" id="brochure">
-  <h2 class="big font-weight7 darkblue nopadding">BROCHURE</h2><br>
-  <h3><i class="fa fa-file-pdf-o"></i> Modern Group 2025 Brochure</h3><br>
-  <p>Download Medium Quality - PDF File
-    <a href="/mg25.pdf">&nbsp;&nbsp;&nbsp;Get It!</a>.
-  </p><br>
-  <p>Contact us if you need a high-quality PDF version of our brochure.</p>
-</div>
+    <section class="gallery-section" id="company-video" aria-labelledby="company-video-heading">
+      <h2 id="company-video-heading" class="gallery-heading">COMPANY VIDEO</h2>
+      <p>Get a quick overview of our company's manufacturing capabilities, project portfolio, and global presence.</p>
+      <div class="embed-responsive embed-responsive-16by9 gallery-video">
+        <iframe title="Modern Heavy Industries company introduction video" loading="lazy" class="embed-responsive-item" src="https://www.youtube.com/embed/3XiJC_uAQCE" allowfullscreen></iframe>
+      </div>
+    </section>
 
-<br>
-
-<div class="white-box-shadow" id="company-video">
-  <h2 class="big font-weight7 darkblue nopadding">COMPANY VIDEO</h2><br>
-  <h3><i class="fa fa-play-circle"></i> Company Introduction Video</h3><br>
-  <p style="font-size: 16px; color: #666;">
-    Get a quick overview of our company's manufacturing capabilities, project portfolio, and global presence.
-  </p>
-  <br>
-  <div class="embed-responsive embed-responsive-16by9">
-    <iframe title="Modern Heavy Industries company introduction video" loading="lazy" class="embed-responsive-item" src="https://www.youtube.com/embed/3XiJC_uAQCE" allowfullscreen></iframe>
-  </div>
-</div>
-
-</div>
-</div>
-</section><!-- end section -->
-
-<div class="clearfix"></div>
-
-<section class="padding-top2" id="product-infographs">
-<div class="container">
-<div class="row">
-
-<div class="col-md-8 marbo-resp3">
-		<h2 class="big font-weight7 darkblue nopadding">Product infographs</h2>
-        <h6 class="font-weight2 line-height4 nopadding">Please click on the buttons below see product infographics.</h6><br>
-        <br><p align="justify">There are many things that our customers need to see. In these days of restricted travel, we 
-        felt the next best thing to do was create as much information as possible with great pictures. Please choose any of the galleries below to see more.</p>
-    </div><!-- end col -->
-</div>
-</div>
-</section><!-- end section -->
-
-<div class="clearfix"></div>
-
-<section class="padding-top-bottom2">
-<div class="container">
-<div class="row">
-<div class="col-lg-12">
-<div class="no padding">
+    <section class="gallery-section" id="product-infographs" aria-labelledby="product-infographs-heading">
+      <h2 id="product-infographs-heading" class="gallery-heading">Product infographs</h2>
+      <p class="gallery-intro">Explore our facilities, materials and manufacturing processes. Select a topic below to view its infographic.</p>
+      <div class="no padding">
 		<div class="btn-group" style="width:100%">
  <a href="#mymodalga1" data-toggle="modal"><button style="width:30%">LOCATION MAP</button></a>
  <a href="#mymodalga2" data-toggle="modal"><button style="width:30%">RAW MATERIALS</button></a>
@@ -359,11 +347,9 @@ div {
   <br /><br /><br />
   
 		</div>
-
-	</div><!-- end col -->
-</div>
-</div>
-</section><!-- end section -->
+    </section>
+  </div>
+</main>
 
 
 
