@@ -137,6 +137,41 @@
 @media (max-width: 990px) {
   .topbar.home-topbar-preview .less4 { gap: 8px; }
 }
+
+/* Homepage only: match MMEC's centered container widths and 12px inner gutters. */
+.topbar.home-topbar-preview .less4,
+.header-section.home-nav-preview .menu-less2 {
+  box-sizing: border-box;
+  width: 100% !important;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.topbar.home-topbar-preview .less4 > div:first-child { padding-left: 0; }
+.topbar.home-topbar-preview .less4 > div:last-child { padding-right: 0; }
+.header-section.home-nav-preview > .container-fluid { padding-left: 0; padding-right: 0; }
+.header-section.home-nav-preview .mod-menu > .row { margin-left: 0; margin-right: 0; }
+.header-section.home-nav-preview .mod-menu > .row > div:first-child { padding-left: 0; }
+.header-section.home-nav-preview .mod-menu > .row > div:last-child { padding-right: 0; }
+.header-section.home-nav-preview .logo { padding-left: 0; }
+@media (min-width: 576px) {
+  .topbar.home-topbar-preview .less4,
+  .header-section.home-nav-preview .menu-less2 { max-width: 540px; }
+}
+@media (min-width: 768px) {
+  .topbar.home-topbar-preview .less4,
+  .header-section.home-nav-preview .menu-less2 { max-width: 720px; }
+}
+@media (min-width: 992px) {
+  .topbar.home-topbar-preview .less4,
+  .header-section.home-nav-preview .menu-less2 { max-width: 960px; }
+  .header-section.home-nav-preview #menu > .navbar-nav > li:last-child > a { padding-right: 0; }
+}
+@media (min-width: 1200px) {
+  .topbar.home-topbar-preview .less4,
+  .header-section.home-nav-preview .menu-less2 { max-width: 1255px; }
+}
 </style>
 </head>
 
@@ -210,7 +245,7 @@
 
 
 
-<nav class="header-section darktransp pin-style">
+<nav class="header-section darktransp pin-style home-nav-preview">
 
 <div class="container-fluid">
 
