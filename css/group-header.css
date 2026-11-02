@@ -16,3 +16,53 @@
   .topbar .less4 > div:first-child li { float: none; display: inline-block; }
   .topbar ul.right { justify-content: center; padding-top: 10px; padding-bottom: 10px; }
 }
+
+
+/* Shared compact topbar: MMEC uses 10px top/bottom padding and a 28px control row. */
+.topbar.group-affiliation-topbar { padding: 10px 0; }
+.topbar.group-affiliation-topbar .less4 { min-height: 28px; }
+.topbar.group-affiliation-topbar .less4 > div { padding-top: 0; padding-bottom: 0; }
+.topbar.group-affiliation-topbar ul.right { padding-top: 0; padding-bottom: 0; min-height: 28px; }
+.topbar.group-affiliation-topbar .group-social-icons { display: inline-flex; align-items: center; gap: 4px; }
+.topbar.group-affiliation-topbar .group-social-icons i { margin-left: 0; margin-right: 0; }
+.topbar.group-affiliation-topbar h6 { margin-top: 0; margin-bottom: 0; line-height: 18px; }
+.topbar.group-affiliation-topbar a.modern-group-link { box-sizing: border-box; min-height: 28px; padding: 4px 11px; font-size: 12px; line-height: 18px; }
+@media (max-width: 990px) {
+  .topbar.group-affiliation-topbar .less4 { gap: 8px; }
+}
+
+/* All page headers: match MMEC's centered container widths and 12px inner gutters. */
+.topbar.group-affiliation-topbar .less4,
+.header-section.group-aligned-nav .menu-less2 {
+  box-sizing: border-box;
+  width: 100% !important;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.topbar.group-affiliation-topbar .less4 > div:first-child { padding-left: 0; }
+.topbar.group-affiliation-topbar .less4 > div:last-child { padding-right: 0; }
+.header-section.group-aligned-nav > .container-fluid { padding-left: 0; padding-right: 0; }
+.header-section.group-aligned-nav .mod-menu > .row { margin-left: 0; margin-right: 0; }
+.header-section.group-aligned-nav .mod-menu > .row > div:first-child { padding-left: 0; }
+.header-section.group-aligned-nav .mod-menu > .row > div:last-child { padding-right: 0; }
+.header-section.group-aligned-nav .logo { padding-left: 0; }
+@media (min-width: 576px) {
+  .topbar.group-affiliation-topbar .less4,
+  .header-section.group-aligned-nav .menu-less2 { max-width: 540px; }
+}
+@media (min-width: 768px) {
+  .topbar.group-affiliation-topbar .less4,
+  .header-section.group-aligned-nav .menu-less2 { max-width: 720px; }
+}
+@media (min-width: 992px) {
+  .topbar.group-affiliation-topbar .less4,
+  .header-section.group-aligned-nav .menu-less2 { max-width: 960px; }
+  .header-section.group-aligned-nav #menu > .navbar-nav > li:last-child > a { padding-right: 0; }
+}
+@media (min-width: 1200px) {
+  .topbar.group-affiliation-topbar .less4,
+  .header-section.group-aligned-nav .menu-less2 { max-width: 1255px; }
+}
+
