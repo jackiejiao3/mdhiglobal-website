@@ -109,6 +109,97 @@
 
     
 
+<style>
+/* Styles scoped to the relocated MDHI workshop tour. */
+#mdhi-facilities .MDHI_Map {
+    width: 100%;
+    max-width: 1920px;
+    max-height: 1029px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+#mdhi-facilities .MDHI_Map img.datu {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+#mdhi-facilities .MDHI_ID {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-top: 25px;
+    width: 100%;
+    z-index: 99;
+}
+
+#mdhi-facilities ul.MDHI_ID_left {
+    float: left;
+    width: 250px;
+}
+
+#mdhi-facilities ul.MDHI_Right {
+    float: right !important;
+}
+
+#mdhi-facilities ul.MDHI_ID_left li {
+    display: block;
+    float: left;
+    padding: 2%;
+    width: 96%;
+    position: relative;
+    margin-bottom: 10px;
+    background: rgba(122, 190, 211, 0.8);
+    box-shadow: -3px 3px 9px #fff;
+    border-radius: 5px;
+}
+
+#mdhi-facilities ul.MDHI_ID_left li a {
+    font-size: 16px;
+    color: #333;
+}
+
+#mdhi-facilities ul.MDHI_ID_left li a i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    margin-top: -15px;
+    color: #FFF;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background: #F00;
+    font-style: normal;
+    text-align: center;
+    line-height: 30px;
+}
+
+#mdhi-facilities ul.MDHI_ID_left li a p {
+    font-size: 15px;
+    color: #111;
+    padding-left: 50px;
+    line-height: 22px;
+    min-height: 66px;
+    text-decoration: none;
+}
+
+#mdhi-facilities ul.MDHI_ID_left li a:hover p {
+    text-decoration: underline;
+}
+#mdhi-facilities .modal {    z-index: 9999 !important;}
+#mdhi-facilities .modal-body img { text-align:center; max-width:100%;}
+
+
+@media screen and (max-width: 800px) {
+#mdhi-facilities .MDHI_Map { max-height: none; }
+#mdhi-facilities .MDHI_ID { position: relative; left: auto; top: auto; padding-top: 10px; z-index: auto; float: left; }
+#mdhi-facilities ul.MDHI_ID_left { width: 49%; margin: 0 0.5%; }
+#mdhi-facilities ul.MDHI_ID_left li a p { font-size: 13px; padding-left: 50px; }
+}
+</style>
 </head>
 
 
@@ -252,17 +343,7 @@
               </li>
                 
 
-				 <li class="active"> <a href="#">FACILITIES</a><span class="arrow"></span>
-
-                <ul class="dm-align-2">
-
-                <li> <a href="mdhimains.html">MODERN HEAVY INDUSTRIES</a></li>
-
-                  <li> <a href="mmec.html">MODERN MODULAR E & C</a></li>
-                  
-                  </ul> 
-
-                </li>
+				 
                 
              
              <li class="active"> <a href="mggal.html">GALLERY</a> <span class="arrow"></span>
@@ -383,6 +464,259 @@
 <div class="clearfix"></div>
 
 
+
+<div id="mdhi-facilities">
+<section class="padding-top">
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-md-10">
+
+		<h2 class="big font-weight7 nopadding">MODERN HEAVY INDUSTRIES MAIN SHOP</h2>
+		<p align="justify">MDHI workshop manufactures structures for buildings, power, HRSG, and mining. 
+		The main workshop's monthly capacity is about 4,000 to 4,500 metric tons of heavy structures or 2,500 
+		metric tons of light-medium steel and HRSG.<br>Goods dispatched from the main shop are exported from 
+		Taicang International port in Taicang City (East Suzhou), China. Taicang Port is the largest container 
+		and bulk cargo port on the Yangtze River, aside from Shanghai Port.<br><br>Click on the image buttons below 
+		for an interactive look inside the main shop.</p>
+
+    </div>
+    
+    </div>
+
+</div>
+
+</section><!-- end section -->
+
+<div class="clearfix"></div>
+
+
+
+<section class="padding-top-bottom">
+  <div class="MDHI_Map">
+                  <img src="suyee/MDHI_Map.jpg" class="datu" loading="lazy">
+              <div class="MDHI_ID">
+                        
+          <ul class="MDHI_ID_left">
+                                <li><a href="#shop-modal1" data-toggle="modal"><i>1</i><p>BAY 1 - 4,940 ㎡<br>PRE-FABRICATION<br>+ BUILT-UP SECTIONS</p></a></li>
+                                <li><a href="#shop-modal2" data-toggle="modal"><i>2</i><p>BAY 2 - 5,700 ㎡<br>HEAVY LIFT<br>CNC MILL, FIT &amp; WELD</p></a></li>
+                                <li><a href="#shop-modal3" data-toggle="modal"><i>3</i><p>BAY 3 - 4,940 ㎡<br>CNC BEAM LINES<br>BUILT-UP SECTION</p></a></li>
+                                <li><a href="#shop-modal4" data-toggle="modal"><i>4</i><p>BAY 4 - 4,560 ㎡<br>ANGLE MASTER<br>SHOT BLASTING 1</p></a></li>
+                                <li><a href="#shop-modal5" data-toggle="modal"><i>5</i><p>BAY 5 - 4,560 ㎡<br>CLEAN &amp; PAINT<br>QC HOLDING POINT</p></a></li>
+                                <li><a href="#shop-modal6" data-toggle="modal"><i>6</i><p>BAY 6 - 6,000 ㎡<br>CLEAN &amp; PAINT<br>QC HOLDING POINT</p></a></li>
+                                <li><a href="#shop-modal7" data-toggle="modal"><i>7</i><p>BAY 7 - 6,000 ㎡<br>HEAVY FABRICATION<br>FIT &amp; WELD</p></a></li>
+                                <li><a href="#shop-modal8" data-toggle="modal"><i>8</i><p>BAY 8 - 6,000 ㎡<br>LARGE BLASTING<br>FINAL QC, PACKING</p></a></li>
+                                <li><a href="#shop-modal9" data-toggle="modal"><i>9</i><p>BAY 9 - 2,300 ㎡<br>GRATING LINE<br>HANDRAIL, PLATFORM</p></a></li>
+                           </ul>
+
+           <ul class="MDHI_ID_left MDHI_Right">
+                               <li><a href="#shop-modal10" data-toggle="modal"><i>10</i><p>SHOP CAFETERIA<br>BREAK ROOMS</p></a></li>
+                               <li><a href="#shop-modal11" data-toggle="modal"><i>11</i><p>WELDING STORES<br> &amp; CONSUMABLES, <br>1800 ㎡</p></a></li>
+                               <li><a href="#shop-modal12" data-toggle="modal"><i>12</i><p>EAST YARD 6000 ㎡<br>FINISHED PRODUCTS<br>PACK &amp; LOAD</p></a></li>
+                               <li><a href="#shop-modal13" data-toggle="modal"><i>13</i><p>RAW MATERIAL YARD<br>8,000 ㎡ </p></a></li>
+                               <li><a href="#shop-modal14" data-toggle="modal"><i>14</i><p>TRIAL ASSEMBLY AREA<br>4,500 ㎡</p></a></li>
+                               <li><a href="#shop-modal15" data-toggle="modal"><i>15</i><p>MDHI MAIN OFFICE<br>&amp; ADMINISTRATION</p></a></li>
+                               <li><a href="#shop-modal16" data-toggle="modal"><i>16</i><p>MODULAR DIVSION<br>STAFF CAFETERIA<br>MANAGER DORM</p></a></li>
+                               <li><a href="#shop-modal17" data-toggle="modal"><i>17</i><p>PAINT INSPECTION<br>&amp; PACKING 4,000㎡</p></a></li>
+                         </ul>
+                   </div> 
+  </div>
+
+<!-- modal -->
+<div class="modal fade" id="shop-modal1" style="display: none;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h3 class="modal-title">BAY 1 - 4,940 ㎡ PRE-FABRICATION + BUILT-UP SECTIONS</h3>
+            </div>
+            <div class="modal-body"><img alt="" src="suyee/BAY1.webp" loading="lazy"></div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="shop-modal2" style="display: none;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h3 class="modal-title">BAY 2 - 5,700 ㎡ HEAVY LIFT CNC MILL, FIT &amp; WELD</h3>
+            </div>
+            <div class="modal-body"><img alt="" src="suyee/BAY2.webp" loading="lazy"></div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="shop-modal3">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h3 class="modal-title">BAY 3 - 4,940 ㎡ CNC BEAM LINES BUILT-UP SECTION</h3>
+            </div>
+            <div class="modal-body"><img alt="" src="suyee/BAY3.webp" loading="lazy"></div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="shop-modal4">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h3 class="modal-title">BAY 4 - 4,560 ㎡ ANGLE MASTER SHOT BLASTING 1</h3>
+            </div>
+            <div class="modal-body"><img alt="" src="suyee/BAY4.webp" loading="lazy"></div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="shop-modal5">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h3 class="modal-title">BAY 5 - 4,560 ㎡ CLEAN &amp; PAINT QC HOLDING POINT</h3>
+            </div>
+            <div class="modal-body"><img alt="" src="suyee/BAY5.webp" loading="lazy"></div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="shop-modal6">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h3 class="modal-title">BAY 6 - 6,000 ㎡ CLEAN &amp; PAINT QC HOLDING POINT</h3>
+            </div>
+            <div class="modal-body"><img alt="" src="suyee/BAY6.webp" loading="lazy"></div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="shop-modal7">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h3 class="modal-title">BAY 7 - 6,000 ㎡ HEAVY FABRICATION FIT &amp; WELD</h3>
+            </div>
+            <div class="modal-body"><img alt="" src="suyee/BAY7.webp" loading="lazy"></div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="shop-modal8">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h3 class="modal-title">BAY 8 - 6,000 ㎡ LARGE BLASTING FINAL QC, PACKING</h3>
+            </div>
+            <div class="modal-body"><img alt="" src="suyee/BAY8.webp" loading="lazy"></div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="shop-modal9">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h3 class="modal-title">BAY 9 - 2,300 ㎡ GRATING LINE HANDRAIL, PLATFORM</h3>
+            </div>
+            <div class="modal-body"><img alt="" src="suyee/BAY9.webp" loading="lazy"></div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="shop-modal10">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h3 class="modal-title">SHOP CAFETERIA BREAK ROOMS</h3>
+            </div>
+            <div class="modal-body"><img alt="" src="suyee/BAY10.webp" loading="lazy"></div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="shop-modal11">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h3 class="modal-title">WELDING STORES  &amp; CONSUMABLES,  1800 ㎡</h3>
+            </div>
+            <div class="modal-body"><img alt="" src="suyee/BAY11.webp" loading="lazy"></div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="shop-modal12">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h3 class="modal-title">EAST YARD 6000 ㎡ FINISHED PRODUCTS PACK &amp; LOAD</h3>
+            </div>
+            <div class="modal-body"><img alt="" src="suyee/BAY12.webp" loading="lazy"></div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="shop-modal13">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h3 class="modal-title">RAW MATERIAL YARD 8,000 ㎡ </h3>
+            </div>
+            <div class="modal-body"><img alt="" src="suyee/BAY13.webp" loading="lazy"></div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="shop-modal14">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h3 class="modal-title">TRIAL ASSEMBLY AREA 4,500 ㎡</h3>
+            </div>
+            <div class="modal-body"><img alt="" src="suyee/BAY14.webp" loading="lazy"></div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="shop-modal15">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h3 class="modal-title">MDHI MAIN OFFICE &amp; ADMINISTRATION</h3>
+            </div>
+            <div class="modal-body"><img alt="" src="suyee/BAY15.webp" loading="lazy"></div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="shop-modal16">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h3 class="modal-title">MODULAR DIVSION STAFF CAFETERIA MANAGER DORM</h3>
+            </div>
+            <div class="modal-body"><img alt="" src="suyee/BAY15.webp" loading="lazy"></div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="shop-modal17">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h3 class="modal-title">PAINT INSPECTION &amp; PACKING 4,000㎡</h3>
+            </div>
+            <div class="modal-body"><img alt="" src="suyee/BAY17.webp" loading="lazy"></div>
+        </div>
+    </div>
+</div>
+
+</section>
+
+<div class="clearfix"></div>
+</div>
 
 <footer class="bg-color-black">
 
