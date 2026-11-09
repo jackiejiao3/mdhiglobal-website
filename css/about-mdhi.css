@@ -80,3 +80,10 @@
 /* Bootstrap container clearfix pseudo-elements must not occupy grid cells. */
 .about-mdhi .about-hero-grid::before, .about-mdhi .about-hero-grid::after,
 .about-mdhi .about-facts::before, .about-mdhi .about-facts::after { display: none; }
+
+/* Corporate governance text adapted from the existing company infographic. */
+.about-mdhi .about-governance { border-top: 1px solid #e2e6e9; }
+.about-mdhi .about-governance-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 28px; }
+.about-mdhi .about-governance-grid article { padding-top: 20px; border-top: 2px solid #cc9933; }
+.about-mdhi .about-governance-grid p { font-size: 14px; }
+@media (max-width: 767px) { .about-mdhi .about-governance-grid { grid-template-columns: 1fr; } }

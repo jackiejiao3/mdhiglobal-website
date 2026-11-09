@@ -36,7 +36,7 @@ while IFS= read -r -d '' rel; do
   files+=("$rel")
 done < <(git ls-files -z)
 (( ${#files[@]} > 0 )) || fail 'Empty publish manifest'
-for required in index.html abtmdhi.html mggal.html mdhicont.html css/group-header.css css/about-mdhi.css; do
+for required in index.html abtmdhi.html medi.html mggal.html manufacturing-capabilities.html mdhicont.html css/group-header.css css/about-mdhi.css css/media-manufacturing.css js/infographic-viewer.js; do
   [[ " ${files[*]} " == *" $required "* ]] || fail "Required publish file missing: $required"
 done
 # Refuse links in any destination component, including existing parent directories.

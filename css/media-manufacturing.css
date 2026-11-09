@@ -1,0 +1,65 @@
+/* Shared resource-page layout, scoped away from the existing site header. */
+.resource-page { padding: 48px 0 64px; color: #263746; background: #fff; }
+.resource-page *, .infographic-dialog * { box-sizing: border-box; }
+.resource-page div, .resource-page p { text-align: left; text-justify: auto; }
+.resource-page p { font-size: 16px; line-height: 1.75; margin: 0 0 18px; }
+.resource-page h1, .resource-page h2, .resource-page h3 { font-family: 'Raleway', sans-serif; font-weight: 700; color: #162f46; letter-spacing: 0; }
+.resource-page h1 { font-size: 42px; line-height: 1.2; margin: 0 0 20px; }
+.resource-page h2 { font-size: 28px; line-height: 1.3; margin: 0 0 18px; }
+.resource-page h3 { font-size: 22px; line-height: 1.35; margin: 0 0 16px; }
+.resource-page .resource-eyebrow { color: #916817; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; line-height: 1.5; margin-bottom: 16px; }
+.resource-page-header { padding-bottom: 32px; margin-bottom: 40px; border-bottom: 1px solid #e2e6e9; }
+.resource-page .resource-page-header > p:not(.resource-eyebrow) { max-width: 860px; font-size: 18px; }
+.resource-page .resource-page-header .resource-header-note { font-size: 14px; color: #5e6c77; }
+.resource-section + .resource-section { padding-top: 40px; margin-top: 40px; border-top: 1px solid #e2e6e9; }
+.resource-page .resource-heading { font-size: 26px; color: #005db4; margin-bottom: 22px; }
+.resource-page .resource-subheading { font-size: 22px; }
+.resource-page .resource-download { display: inline-block; padding: 11px 20px; background: #162f46; color: #fff; border-radius: 2px; font-size: 14px; line-height: 1.5; text-decoration: none; }
+.resource-page .resource-download:hover, .resource-page .resource-download:focus { background: #005db4; }
+.resource-page .resource-note { font-size: 14px; color: #666; margin-bottom: 0; }
+.resource-video { margin-top: 24px; }
+.resource-page .resource-text-link { display: inline-block; font-size: 14px; font-weight: 600; color: #005db4; text-decoration: underline; text-underline-offset: 4px; padding: 7px 0; }
+.team-snapshot { max-width: 682px; margin: 24px 0 0; }
+.team-snapshot img { display: block; width: 100%; height: auto; }
+.team-snapshot figcaption { color: #5e6c77; font-size: 13px; padding-top: 12px; }
+.resource-page a:focus-visible, .infographic-dialog a:focus-visible, .infographic-dialog button:focus-visible { outline: 3px solid #005db4; outline-offset: 4px; }
+.process-jump-nav { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+.process-jump-nav a { padding: 10px 14px; border: 1px solid #cbd5dc; color: #162f46; background: #f5f7f8; font-size: 14px; line-height: 1.4; text-decoration: none; border-radius: 2px; }
+.process-jump-nav a:hover, .process-jump-nav a:focus { border-color: #005db4; color: #005db4; background: #fff; }
+.process-section { margin: 0 auto 56px; max-width: 1000px; scroll-margin-top: 120px; }
+.process-section-header { margin: 0 0 26px; }
+.resource-page .process-section-header h2 { color: #005db4; }
+.process-card { margin-bottom: 32px; padding: 22px; border: 1px solid #e2e6e9; background: #fff; scroll-margin-top: 120px; }
+.process-card-header { display: flex; justify-content: space-between; gap: 18px; align-items: baseline; border-bottom: 1px solid #e2e6e9; margin-bottom: 20px; padding-bottom: 14px; }
+.resource-page .process-card-header h3 { margin: 0; font-size: 22px; }
+.process-card-header > a { color: #526775; font-size: 12px; line-height: 1.5; flex-shrink: 0; }
+.process-image-link { display: block; cursor: zoom-in; background: #f5f7f8; }
+.process-image-link img { display: block; width: 100%; height: auto; }
+.resource-page .process-image-caption { margin: 12px 0 0; font-size: 13px; color: #5e6c77; }
+.resource-next-step { padding: 28px; border-left: 4px solid #cc9933; background: #f4f6f7; max-width: 1000px; margin: 0 auto; }
+.resource-next-step .resource-download { margin-right: 22px; }
+.infographic-dialog { box-sizing: border-box; position: fixed; inset: 0; margin: auto; width: min(96vw,1500px); max-width: 96vw; max-height: 92vh; padding: 0; border: 0; background: #fff; color: #263746; }
+.infographic-dialog:not([open]) { display: none; }
+.infographic-dialog::backdrop { background: rgba(10,25,38,.8); }
+.infographic-dialog-header { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 15px 20px; border-bottom: 1px solid #dce2e6; }
+.infographic-dialog-header h2 { margin: 0; font: 700 21px/1.3 'Raleway',sans-serif; color: #162f46; }
+.infographic-dialog-header button { padding: 8px 14px; background: #162f46; border: 0; color: #fff; font: 600 14px/1.4 sans-serif; cursor: pointer; flex-shrink: 0; }
+.infographic-dialog-scroll { max-height: calc(92vh - 135px); overflow: auto; background: #f5f7f8; text-align: center; }
+.infographic-dialog-scroll img { display: block; margin: auto; width: 100%; height: auto; }
+.infographic-dialog-note { padding: 12px 20px; margin: 0; font: 14px/1.5 sans-serif; }
+.infographic-dialog-note a { color: #005db4; }
+html.infographic-viewer-open { overflow: hidden; }
+@media (max-width: 767px) {
+  .resource-page { padding: 32px 0 40px; }
+  .resource-page h1 { font-size: 33px; }
+  .resource-page h2 { font-size: 25px; }
+  .resource-page-header { padding-bottom: 24px; margin-bottom: 28px; }
+  .resource-section + .resource-section { padding-top: 28px; margin-top: 28px; }
+  .process-section { margin-bottom: 38px; }
+  .process-card { padding: 12px; }
+  .process-card-header { flex-wrap: wrap; gap: 10px; margin-bottom: 14px; }
+  .resource-page .process-card-header h3 { font-size: 20px; }
+  .process-jump-nav { gap: 8px; }
+  .process-jump-nav a { font-size: 13px; padding: 8px 10px; }
+  .resource-next-step { padding: 22px; }
+}
