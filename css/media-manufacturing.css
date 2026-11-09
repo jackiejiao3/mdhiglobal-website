@@ -12,8 +12,8 @@
 .resource-page .resource-page-header > p:not(.resource-eyebrow) { max-width: 860px; font-size: 18px; }
 .resource-page .resource-page-header .resource-header-note { font-size: 14px; color: #5e6c77; }
 .resource-section + .resource-section { padding-top: 40px; margin-top: 40px; border-top: 1px solid #e2e6e9; }
-.resource-page .resource-heading { font-size: 26px; color: #005db4; margin-bottom: 22px; }
-.resource-page .resource-subheading { font-size: 22px; }
+.resource-page .resource-heading { font-size: 26px; color: #005db4; margin-bottom: 34px; }
+.resource-page .resource-subheading { font-size: 22px; margin-bottom: 24px; }
 .resource-page .resource-download { display: inline-block; padding: 11px 20px; background: #162f46; color: #fff; border-radius: 2px; font-size: 14px; line-height: 1.5; text-decoration: none; }
 .resource-page .resource-download:hover, .resource-page .resource-download:focus { background: #005db4; }
 .resource-page .resource-note { font-size: 14px; color: #666; margin-bottom: 0; }

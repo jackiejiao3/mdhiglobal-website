@@ -59,7 +59,6 @@
 @media (min-width: 992px) {
   .topbar.group-affiliation-topbar .less4,
   .header-section.group-aligned-nav .menu-less2 { max-width: 960px; }
-  .header-section.group-aligned-nav #menu > .navbar-nav > li:last-child > a { padding-right: 0; }
 }
 @media (min-width: 1200px) {
   .topbar.group-affiliation-topbar .less4,

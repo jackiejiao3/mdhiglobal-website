@@ -202,6 +202,7 @@
 </style>
 <link rel="stylesheet" href="css/group-header.css">
 <link rel="stylesheet" href="css/about-mdhi.css">
+<link rel="stylesheet" href="css/media-manufacturing.css">
 </head>
 
 
@@ -316,7 +317,7 @@
 
                   
 
-                  <li> <a href="mdhisvc.html">SERVICE CENTER</a></li>
+                  <li> <a href="mdhisvc.html">PROJECT DELIVERY</a></li>
 
                   <li> <a href="mdhiqc.html">QUALITY ASSURANCE</a></li>
 
@@ -383,7 +384,7 @@
 <!-- end navigation -->
 
 <main class="about-mdhi">
-  <section class="about-hero">
+  <section class="about-hero" id="about-overview">
     <div class="container about-hero-grid">
       <div class="about-hero-copy">
         <p class="about-eyebrow">ABOUT MDHI / A MODERN GROUP COMPANY</p>
@@ -402,7 +403,10 @@
     </div>
   </section>
 
-  <section class="about-location" aria-label="MDHI location and facilities">
+  <nav class="about-section-nav" aria-label="About MDHI sections"><div class="container">
+<a href="#about-overview">Overview</a><a href="#about-capabilities">Capabilities</a><a href="#about-group">Modern Group</a><a href="#corporate-governance">Governance</a><a href="#location-hse">Location &amp; HSE</a><a href="#mdhi-facilities">Workshop tour</a>
+</div></nav>
+<section class="about-location" aria-label="MDHI location and facilities">
     <div class="container about-facts">
       <div><strong>100,000+ <span>m&#178;</span></strong><p>MDHI factory site in Taicang</p></div>
       <div><strong>9 <span>km</span></strong><p>From MDHI to Taicang Port</p></div>
@@ -410,7 +414,7 @@
     </div>
   </section>
 
-  <section class="about-section">
+  <section class="about-section" id="about-capabilities">
     <div class="container">
       <div class="about-section-top">
         <div><p class="about-eyebrow">01 / WHAT WE DO</p><h2>Steel fabrication.<br>Project by project.</h2></div>
@@ -427,7 +431,7 @@
     </div>
   </section>
 
-  <section class="about-section about-group">
+  <section class="about-section about-group" id="about-group">
     <div class="container">
       <div class="about-section-top">
         <div><p class="about-eyebrow">02 / THE GROUP BEHIND MDHI</p><h2>Specialist companies.<br>Broader capabilities.</h2></div>
@@ -445,10 +449,17 @@
 <div class="container">
 <div class="about-section-top"><div><p class="about-eyebrow">RESPONSIBLE BUSINESS</p><h2 id="governance-title">Corporate governance<br>&amp; business ethics.</h2></div>
 <p>As part of Modern Group, MDHI is committed to conducting business ethically and serving the interests of customers, employees and their families. Integrity, transparency and fairness guide our business operations and professional relationships.</p></div>
-<div class="about-governance-grid">
+<details class="about-policy-details"><summary>Code of ethics &amp; employment policies</summary><div class="about-governance-grid">
 <article><h3>People &amp; development</h3><p>We invest in our people and promote a culture of continuous improvement. Our internal policies address non-discrimination, equal employment, child labor, substance abuse and employee conduct.</p></article>
 <article><h3>Responsible sourcing</h3><p>Our internal policies include conflict-minerals sourcing, reflecting the group's commitment to responsible business practices.</p></article>
 <article><h3>Fair labor practices</h3><p>We uphold applicable national labor policies, fair employment practices and social insurance requirements as part of our responsibility to employees.</p></article>
+</div></details>
+</div></section>
+<section class="about-section about-location-hse" id="location-hse" aria-labelledby="location-hse-title"><div class="container">
+<div class="about-section-top"><div><p class="about-eyebrow">LOCATION &amp; HSE</p><h2 id="location-hse-title">Our location.<br>Our working environment.</h2></div><p>Find our facility and explore our workplace health and safety information. Select either guide to read the full infographic.</p></div>
+<div class="about-info-grid">
+<article class="about-info-card"><h3>Location map</h3><a href="images/ga1.webp" target="_blank" rel="noopener noreferrer" data-infographic-title="Location map" aria-label="Enlarge location map"><img src="images/ga1.webp" alt="MDHI location map infographic" width="1246" height="1748" loading="lazy" decoding="async"><span>View location map &nearr;</span></a></article>
+<article class="about-info-card"><h3>Health &amp; safety</h3><a href="images/ga24.webp" target="_blank" rel="noopener noreferrer" data-infographic-title="Health &amp; safety" aria-label="Enlarge health and safety guide"><img src="images/ga24.webp" alt="MDHI health and safety infographic" width="1236" height="1748" loading="lazy" decoding="async"><span>View health &amp; safety guide &nearr;</span></a></article>
 </div>
 </div></section>
 <div id="mdhi-facilities" class="about-workshop">
@@ -462,7 +473,7 @@
 <div class="col-md-10">
 
 		<h2 class="big font-weight7 nopadding">Our Taicang workshop</h2>
-		<p>Our Taicang workshop fabricates structural steel for building, power, HRSG support and mining applications. Fabrication, machining, coating, inspection and packing areas are brought together on one site, with export shipments handled through nearby Taicang Port.</p><p>Select a numbered area on the map below to explore the workshop.</p>
+		<p>Our Taicang workshop fabricates structural steel for building, power, HRSG support and mining applications. Fabrication, machining, coating, inspection and packing areas are brought together on one site, with export shipments handled through nearby Taicang Port.</p><p>Open the interactive workshop tour below, then select a numbered area to explore.</p>
 
     </div>
     
@@ -476,6 +487,7 @@
 
 
 
+<details class="about-workshop-details"><summary><span>Explore the workshop map</span><span class="about-disclosure-hint">17 areas</span></summary>
 <section class="padding-top-bottom">
   <div class="MDHI_Map">
                   <img src="suyee/MDHI_Map.jpg" class="datu" loading="lazy">
@@ -696,11 +708,16 @@
 </div>
 
 </section>
-
+</details>
 <div class="clearfix"></div>
 </div>
 
 </main>
+<dialog class="infographic-dialog" id="infographic-viewer" aria-labelledby="infographic-viewer-title">
+  <div class="infographic-dialog-header"><h2 id="infographic-viewer-title">Infographic</h2><button type="button" data-close-viewer aria-label="Close enlarged infographic" autofocus>Close &times;</button></div>
+  <div class="infographic-dialog-scroll"><img alt="" id="infographic-viewer-image"></div>
+  <p class="infographic-dialog-note"><a id="infographic-viewer-original" href="#" target="_blank" rel="noopener noreferrer">Open full-size image in a new tab</a></p>
+</dialog>
 
 <footer class="bg-color-black">
 
@@ -742,43 +759,7 @@
 
 <script src="js/masterslider/masterslider.min.js"></script>
 
-<script type="text/javascript">
 
-	var slider = new MasterSlider();
-
- 
-
-    // adds Arrows navigation control to the slider.
-
-     slider.control('arrows');
-
-    // slider.control('bullets');
-
- 
-
-     slider.setup('masterslider' , {
-
-         width:1550,    // slider standard width
-
-         height:760,   // slider standard height
-
-         space:0,
-
-         layout:'fullwidth',
-
-         loop:true,
-
-         preload:0,
-
-		 speed: 36,
-
-		 view:'parallaxMask',
-
-         autoplay:true
-
-    });
-
-</script>
 
 
 
@@ -832,6 +813,7 @@
 
 
 
+<script src="js/infographic-viewer.js" defer></script>
 </body>
 
 </html>
