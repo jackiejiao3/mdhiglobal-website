@@ -63,3 +63,18 @@ html.infographic-viewer-open { overflow: hidden; }
   .process-jump-nav a { font-size: 13px; padding: 8px 10px; }
   .resource-next-step { padding: 22px; }
 }
+
+/* Larger shortcuts and clear infographic titles for scanning long process pages. */
+.process-jump-nav { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; margin-top: 30px; }
+.process-jump-nav a { display: flex; align-items: center; min-height: 70px; padding: 18px 22px; border: 1px solid #162f46; border-left: 5px solid #cc9933; border-radius: 4px; background: #162f46; color: #fff; font-size: 17px; line-height: 1.5; font-weight: 600; }
+.process-jump-nav a:hover, .process-jump-nav a:focus { color: #fff; background: #005db4; border-color: #005db4; border-left-color: #cc9933; }
+.resource-page .resource-eyebrow { font-size: 15px; line-height: 1.6; }
+.resource-page .process-card-header h3 { font-size: 28px; line-height: 1.35; color: #005db4; border-left: 4px solid #cc9933; padding-left: 14px; }
+.process-card-header { align-items: center; padding: 16px; margin: -6px -6px 20px; background: #f4f6f7; border-bottom: 1px solid #dde4e9; }
+.resource-page .resource-heading { font-size: 28px; }
+@media (max-width: 767px) {
+  .process-jump-nav { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
+  .process-jump-nav a { min-height: 74px; padding: 13px; font-size: 15px; }
+  .resource-page .process-card-header h3 { font-size: 24px; }
+  .process-card-header { padding: 12px; margin: 0 0 14px; }
+}

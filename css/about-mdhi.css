@@ -132,3 +132,49 @@
   .about-mdhi .about-workshop { padding-top: 30px; padding-bottom: 32px; }
 }
 @media (max-width: 575px) { .about-mdhi .about-workshop-details .MDHI_ID { grid-template-columns: 1fr; } }
+
+/* Prominent section navigation, location focus and structured workshop area cards. */
+.about-section-nav { padding: 20px 0; background: #f4f6f7; }
+.about-section-nav .container { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; }
+.about-section-nav a { display: flex; align-items: center; min-height: 64px; padding: 18px 22px; border: 1px solid #162f46; border-left: 5px solid #cc9933; background: #162f46; color: #fff; font-size: 17px; line-height: 1.5; border-radius: 4px; }
+.about-section-nav a:hover, .about-section-nav a:focus { background: #005db4; border-color: #005db4; border-left-color: #cc9933; color: #fff; }
+.about-mdhi .about-eyebrow { font-size: 16px; line-height: 1.6; letter-spacing: 1.2px; margin-bottom: 18px; }
+.about-mdhi .about-company-tag { font-size: 13px; }
+.about-mdhi .about-company-name { min-height: 84px; font-size: 16px; }
+.about-mdhi .about-company-name a { color: #162f46; text-decoration: none; }
+.about-mdhi .about-company-name a:hover, .about-mdhi .about-company-name a:focus { color: #005db4; text-decoration: underline; }
+.about-mdhi .about-location-section { background: #f4f6f7; }
+.about-mdhi .about-location-map { margin: 0; padding: 24px; border: 1px solid #dbe3e9; background: #fff; }
+.about-mdhi .about-image-heading, .about-mdhi .workshop-area-group > h3 { color: #005db4; font-size: 28px; line-height: 1.35; margin: 0 0 22px; padding-left: 14px; border-left: 4px solid #cc9933; }
+.about-mdhi .about-location-map a, .about-mdhi .workshop-overview > a { display: block; cursor: zoom-in; }
+.about-mdhi .about-location-map img { display: block; width: 100%; height: auto; }
+.about-mdhi .about-location-map figcaption, .about-mdhi .workshop-overview figcaption { font-size: 14px; line-height: 1.7; color: #5e6c77; margin-top: 16px; }
+.about-mdhi .about-workshop-details > .workshop-tour-content { padding: 24px; }
+.about-mdhi .workshop-overview { margin: 0 0 32px; }
+.about-mdhi .workshop-overview img { display: block; width: 100%; height: auto; }
+.about-mdhi .workshop-area-group { margin-top: 30px; }
+.about-mdhi .workshop-area-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; padding: 0; margin: 0; list-style: none; }
+.about-mdhi .workshop-area-grid > li { margin: 0; padding: 0; min-width: 0; }
+.about-mdhi .workshop-area-link { display: grid; grid-template-columns: 34px minmax(0,1fr) 15px; align-items: start; gap: 12px; padding: 16px; min-height: 140px; height: 100%; border: 1px solid #d8e1e8; border-radius: 4px; background: #fff; text-decoration: none; color: #263746; }
+.about-mdhi .workshop-area-link:hover, .about-mdhi .workshop-area-link:focus { border-color: #cc9933; background: #fffaf0; }
+.about-mdhi .workshop-area-number { display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: #162f46; color: #fff; font: 700 15px/1 sans-serif; }
+.about-mdhi .workshop-area-copy { display: grid; gap: 5px; }
+.about-mdhi .workshop-area-copy strong { font-size: 17px; line-height: 1.35; }
+.about-mdhi .workshop-area-size { color: #916817; font-size: 13px; font-weight: 600; line-height: 1.5; }
+.about-mdhi .workshop-area-description { font-size: 14px; line-height: 1.5; color: #526775; }
+.about-mdhi .workshop-area-arrow { color: #005db4; font-size: 17px; line-height: 1.6; }
+#mdhi-facilities .modal { z-index: 9999 !important; }
+#mdhi-facilities .modal-body img { display: block; max-width: 100%; height: auto; margin: 0 auto; }
+@media (max-width: 991px) { .about-mdhi .workshop-area-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media (max-width: 767px) {
+  .about-section-nav .container { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
+  .about-section-nav a { min-height: 64px; padding: 14px; font-size: 15px; }
+  .about-mdhi .about-eyebrow { font-size: 15px; }
+  .about-mdhi .about-company-name { min-height: 0; }
+  .about-mdhi .about-location-map, .about-mdhi .about-workshop-details > .workshop-tour-content { padding: 16px; }
+  .about-mdhi .about-image-heading, .about-mdhi .workshop-area-group > h3 { font-size: 24px; }
+}
+@media (max-width: 575px) {
+  .about-mdhi .workshop-area-grid { grid-template-columns: 1fr; }
+  .about-mdhi .workshop-area-link { min-height: 100px; }
+}
