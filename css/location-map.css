@@ -1,0 +1,21 @@
+/* Illustrator map: independent vector markers over the original map artwork. */
+.about-mdhi .location-map-controls { margin-bottom: 16px; }
+.about-mdhi .location-map-controls label { display: block; margin-bottom: 6px; color: #162f46; font-weight: 700; }
+.about-mdhi .location-map-controls select { max-width: 100%; width: 480px; min-height: 44px; padding: 8px 12px; border: 1px solid #aebdc8; border-radius: 4px; background: #fff; color: #162f46; font-size: 15px; }
+.about-mdhi .location-map-controls p { margin: 10px 0 0; color: #526775; font-size: 14px; line-height: 1.6; }
+.about-mdhi .location-map-scroll { overflow-x: auto; overscroll-behavior-x: contain; }
+.about-mdhi .location-map-stage { position: relative; }
+.about-mdhi .location-map-live { position: relative; }
+.about-mdhi .location-map-fallback[hidden], .about-mdhi .location-map-live[hidden], .about-mdhi .location-map-controls[hidden], .about-mdhi .location-map-status[hidden] { display: none; }
+.about-mdhi .location-map-pin { position: absolute; display: block; margin: 0; padding: 0; border: 0; border-radius: 50% 50% 8px 8px; background: transparent; box-shadow: none; cursor: pointer; color: #162f46; z-index: 2; }
+.about-mdhi .location-map-pin svg { display: block; width: 100%; height: 100%; overflow: visible; transform-origin: 50% 96%; transition: transform .2s ease, filter .2s ease; }
+.about-mdhi .location-map-pin.is-active { z-index: 4; }
+.about-mdhi .location-map-pin.is-active svg { transform: scale(1.1); filter: drop-shadow(0 0 3px #cc9933); }
+.about-mdhi .location-map-pin.is-company.is-active svg { transform: scale(1.2); }
+.about-mdhi .location-map-pin.is-mdhi.is-active svg { transform: scale(1.15); filter: drop-shadow(0 0 5px #cc9933); }
+.about-mdhi .location-map-pin:focus-visible { outline: 2px solid #005db4; outline-offset: 2px; }
+.about-mdhi .location-map-callout { position: absolute; display: block; pointer-events: none; z-index: 1; border: 2px solid transparent; border-radius: 9px; transition: border-color .2s ease, box-shadow .2s ease; }
+.about-mdhi .location-map-callout.is-active { border-color: #cc9933; box-shadow: 0 0 0 3px rgba(204,153,51,.2); }
+.about-mdhi .location-map-status { margin: 12px 0 0; min-height: 24px; font-size: 14px; color: #162f46; font-weight: 600; }
+@media (max-width: 991px) { .about-mdhi .location-map-interactive.is-ready .location-map-stage { min-width: 900px; } }
+@media (prefers-reduced-motion: reduce) { .about-mdhi .location-map-pin svg, .about-mdhi .location-map-callout { transition: none; } }
