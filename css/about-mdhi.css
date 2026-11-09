@@ -179,3 +179,6 @@
   .about-mdhi .workshop-area-grid { grid-template-columns: 1fr; }
   .about-mdhi .workshop-area-link { min-height: 100px; }
 }
+
+/* Preserve the full gantry-crane composition at every breakpoint. */
+.about-mdhi .about-hero-image img.about-yard-image { height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
