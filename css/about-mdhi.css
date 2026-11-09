@@ -136,8 +136,9 @@
 /* Prominent section navigation, location focus and structured workshop area cards. */
 .about-section-nav { padding: 20px 0; background: #f4f6f7; }
 .about-section-nav .container { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; }
-.about-section-nav a { display: flex; align-items: center; min-height: 64px; padding: 18px 22px; border: 1px solid #162f46; border-left: 5px solid #cc9933; background: #162f46; color: #fff; font-size: 17px; line-height: 1.5; border-radius: 4px; }
-.about-section-nav a:hover, .about-section-nav a:focus { background: #005db4; border-color: #005db4; border-left-color: #cc9933; color: #fff; }
+.about-section-nav a { display: flex; align-items: center; min-height: 64px; padding: 18px 22px; border: 1px solid #cbd5dc; border-left: 3px solid #cc9933; background: #fff; color: #162f46; font-size: 17px; line-height: 1.5; border-radius: 4px; }
+.about-section-nav a:hover, .about-section-nav a:focus { background: #eef4f8; border-color: #96adbf; border-left-color: #cc9933; color: #005db4; }
+.about-section-nav a:focus-visible { outline: 2px solid #005db4; outline-offset: 3px; }
 .about-mdhi .about-eyebrow { font-size: 16px; line-height: 1.6; letter-spacing: 1.2px; margin-bottom: 18px; }
 .about-mdhi .about-company-tag { font-size: 13px; }
 .about-mdhi .about-company-name { min-height: 84px; font-size: 16px; }
