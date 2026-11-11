@@ -434,3 +434,15 @@
 .awards-page .award-card__copy>p,.awards-page .award-card__content>p{font-size:14px;line-height:1.85;color:#59636c;margin:0 0 16px;max-width:70ch}
 .awards-page .award-card__details{margin-top:22px}.awards-page .award-card__facts{margin-top:24px}.awards-page .award-card__gallery{margin-top:16px}
 @media(max-width:767px){.awards-page .award-card,.awards-page .award-card--featured,.awards-page .award-card--reverse{display:flex;flex-direction:column;gap:26px;padding:24px}.awards-page .award-card .award-card__visual{order:1;max-width:400px}.awards-page .award-card .award-card__content{order:0;width:100%}.awards-page .award-card h3{font-size:26px}}
+
+/* Refined crops keep people aligned; modals retain uncropped originals. */
+.awards-page .award-card__meta{display:flex;flex-direction:row;align-items:flex-start;justify-content:space-between;gap:12px;width:100%}
+.awards-page .award-card__meta span{flex:1;min-width:0}
+.awards-page .award-card__meta time{flex:none;margin-left:auto;text-align:right;white-space:nowrap;font-size:10px}
+.awards-page .award-card--fives .award-card__visual{aspect-ratio:3/4;max-width:300px;justify-self:center}
+.awards-page .award-card--fives .award-card__visual img{position:absolute;inset:0;width:100%;height:100%;max-height:none;object-fit:cover;object-position:50% 62%}
+.awards-page .award-card__gallery--two button{flex:1 1 0;max-width:210px;height:132px}
+.awards-page .award-card__gallery--two img{object-fit:cover;object-position:center 58%}
+.awards-page .award-card__gallery--two .award-gallery__people--portrait-low{object-position:center 68%}
+.awards-page .award-card__gallery--two .award-gallery__people--portrait{object-position:center 55%}
+@media(max-width:480px){.awards-page .award-card__meta{gap:10px}.awards-page .award-card__meta span{font-size:9px}.awards-page .award-card__meta time{font-size:9px}.awards-page .award-card__gallery--two button{height:110px}}
