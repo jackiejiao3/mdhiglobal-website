@@ -76,3 +76,6 @@
 
 /* Left-align company navigation dropdowns across the site. */
 .header-section .mod-menu .navbar-nav li ul li,.header-section .mod-menu .navbar-nav li ul li a{text-align:left!important}.header-section .mod-menu .navbar-nav li ul li a{padding-left:24px!important;letter-spacing:normal}
+
+/* Align every social control on the same center line. */
+.topbar.group-affiliation-topbar .group-social-icons{align-items:center;line-height:1;height:24px}.topbar.group-affiliation-topbar .group-social-icons>a{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;line-height:1;vertical-align:middle;padding:0;margin:0}.topbar.group-affiliation-topbar .group-social-icons>a>i{box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;padding:0;margin:0;line-height:1;vertical-align:middle;font-size:11px}
