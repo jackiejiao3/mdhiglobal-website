@@ -25,10 +25,19 @@
 .topbar.group-affiliation-topbar ul.right { padding-top: 0; padding-bottom: 0; min-height: 28px; }
 .topbar.group-affiliation-topbar .group-social-icons { display: inline-flex; align-items: center; gap: 4px; }
 .topbar.group-affiliation-topbar .group-social-icons i { margin-left: 0; margin-right: 0; }
+.topbar.group-affiliation-topbar .group-social-icons .social-x-link { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; }
+.topbar.group-affiliation-topbar .group-social-icons .social-x-mark { box-sizing: border-box; display: inline-flex; width: 22px; height: 22px; align-items: center; justify-content: center; border: 1px solid #1f1f1b; border-radius: 50%; color: #1f1f1b; font: 600 10px/1 Arial, sans-serif; text-align: center; transition: opacity .3s ease; }
+.topbar.group-affiliation-topbar .group-social-icons .social-x-link:hover .social-x-mark,
+.topbar.group-affiliation-topbar .group-social-icons .social-x-link:focus .social-x-mark { opacity: .5; }
+.topbar.group-affiliation-topbar .group-social-icons .social-x-link:focus-visible { outline: 2px solid #162f46; outline-offset: 2px; border-radius: 50%; }
 .topbar.group-affiliation-topbar h6 { margin-top: 0; margin-bottom: 0; line-height: 18px; }
 .topbar.group-affiliation-topbar a.modern-group-link { box-sizing: border-box; min-height: 28px; padding: 4px 11px; font-size: 12px; line-height: 18px; }
 @media (max-width: 990px) {
   .topbar.group-affiliation-topbar .less4 { gap: 8px; }
+  .header-section.group-aligned-nav #menu > ul li ul li a {
+    padding-left: 45px;
+    text-align: left;
+  }
 }
 
 /* All page headers: match MMEC's centered container widths and 12px inner gutters. */
@@ -65,3 +74,8 @@
   .header-section.group-aligned-nav .menu-less2 { max-width: 1255px; }
 }
 
+/* Left-align company navigation dropdowns across the site. */
+.header-section .mod-menu .navbar-nav li ul li,.header-section .mod-menu .navbar-nav li ul li a{text-align:left!important}.header-section .mod-menu .navbar-nav li ul li a{padding-left:24px!important;letter-spacing:normal}
+
+/* Align every social control on the same center line. */
+.topbar.group-affiliation-topbar .group-social-icons{align-items:center;line-height:1;height:24px}.topbar.group-affiliation-topbar .group-social-icons>a{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;line-height:1;vertical-align:middle;padding:0;margin:0}.topbar.group-affiliation-topbar .group-social-icons>a>i{box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;padding:0;margin:0;line-height:1;vertical-align:middle;font-size:11px}
