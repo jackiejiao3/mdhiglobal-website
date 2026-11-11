@@ -221,6 +221,47 @@
 .award-card__link:hover,
 .award-card__link:focus { color: var(--awards-gold); outline: none; }
 
+.award-card--featured {
+  border-top: 4px solid var(--awards-gold);
+}
+.award-card--featured .award-card__visual {
+  min-height: 560px;
+}
+.award-card__gallery {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 2px;
+}
+.award-card__gallery--two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.award-card__gallery button {
+  background: #0e1c2b;
+  border: 0;
+  cursor: zoom-in;
+  height: 92px;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+}
+.award-card__gallery button:focus {
+  outline: 3px solid var(--awards-gold);
+  outline-offset: 2px;
+}
+.award-card__gallery img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity .25s ease, transform .3s ease;
+  width: 100%;
+}
+.award-card__gallery button:hover img,
+.award-card__gallery button:focus img {
+  opacity: .86;
+  transform: scale(1.035);
+}
+
 .awards-cta { background: #d1d1d1; border-top: 4px solid var(--awards-gold); padding: 66px 0; }
 .awards-cta__inner { align-items: center; display: flex; gap: 32px; justify-content: space-between; }
 .awards-cta h2 { color: var(--awards-navy); font-size: clamp(28px, 4vw, 42px); font-weight: 800; line-height: 1.18; margin: 0; text-transform: none; }
@@ -242,6 +283,7 @@
   .award-card--reverse .award-card__visual { grid-column: 1; }
   .award-card--reverse .award-card__content { grid-column: 2; }
   .award-card__content { padding: 34px 32px; }
+  .award-card--featured .award-card__visual { min-height: 500px; }
 }
 
 @media (max-width: 767px) {
@@ -256,9 +298,11 @@
   .award-card,
   .award-card--reverse { display: block; }
   .award-card__visual { min-height: 360px; width: 100%; }
+  .award-card--featured .award-card__visual { min-height: 380px; }
   .award-card__content { padding: 28px 23px 30px; }
   .award-card__meta { align-items: flex-start; flex-direction: column; gap: 6px; }
   .award-card__facts > div { display: block; }
   .award-card__facts dt { margin-bottom: 5px; }
+  .award-card__gallery button { height: 86px; }
   .awards-cta__inner { align-items: flex-start; flex-direction: column; }
 }
