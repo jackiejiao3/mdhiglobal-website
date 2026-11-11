@@ -34,7 +34,7 @@ if (true) {
         $mail->Host = 'smtp.office365.com';  // Specify main and backup SMTP servers
         $mail->SMTPAuth = true;                               // Enable SMTP authentication
         $mail->Username = 'modernheavy@outlook.com';                 // SMTP username
-        $mail->Password = '88Taicang88';                           // SMTP password
+        $mail->Password = getenv('MDHI_SMTP_PASSWORD') ?: '';                           // SMTP password
         $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
         $mail->Port = 587;                                    // TCP port to connect to
         //Recipients
