@@ -34,6 +34,10 @@
 .topbar.group-affiliation-topbar a.modern-group-link { box-sizing: border-box; min-height: 28px; padding: 4px 11px; font-size: 12px; line-height: 18px; }
 @media (max-width: 990px) {
   .topbar.group-affiliation-topbar .less4 { gap: 8px; }
+  .header-section.group-aligned-nav #menu > ul li ul li a {
+    padding-left: 45px;
+    text-align: left;
+  }
 }
 
 /* All page headers: match MMEC's centered container widths and 12px inner gutters. */

@@ -228,8 +228,10 @@
 .award-card--featured .award-card__visual {
   background: #fff;
   display: block;
+  margin: 32px auto 0;
+  max-width: 720px;
   min-height: 0;
-  width: 100%;
+  width: calc(100% - 64px);
 }
 .award-card--featured .award-card__visual img {
   display: block;
@@ -290,6 +292,7 @@
   width: 100%;
 }
 .award-card__gallery .award-gallery__people--portrait { object-position: center 48%; }
+.award-card__gallery .award-gallery__people--portrait-low { object-position: center 68%; }
 .award-card__gallery .award-gallery__people--team { object-position: center 52%; }
 .award-card__gallery button:hover img,
 .award-card__gallery button:focus img {
@@ -334,6 +337,7 @@
   .award-card--reverse { display: block; }
   .award-card__visual { min-height: 360px; width: 100%; }
   .award-card--featured .award-card__content { display: block; }
+  .award-card--featured .award-card__visual { margin-top: 18px; width: calc(100% - 36px); }
   .award-card--featured .award-card__details { margin-top: 28px; }
   .award-card__content { padding: 28px 23px 30px; }
   .award-card__meta { align-items: flex-start; flex-direction: column; gap: 6px; }
