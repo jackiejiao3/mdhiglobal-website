@@ -346,3 +346,77 @@
   .award-card__gallery button { aspect-ratio: 16 / 9; }
   .awards-cta__inner { align-items: flex-start; flex-direction: column; }
 }
+
+/* Keep the first two recognitions text-led, with compact supporting photos. */
+.awards-page .award-card--featured {
+  display: grid;
+  grid-template-columns: minmax(220px, .32fr) minmax(0, .68fr);
+  align-items: start;
+  gap: 32px;
+  padding: 32px;
+}
+.awards-page .award-card--featured .award-card__visual {
+  grid-column: 1;
+  grid-row: 1;
+  width: 100%;
+  max-width: 320px;
+  margin: 0;
+  aspect-ratio: 4 / 3;
+  min-height: 0;
+  background: #eef0f0;
+}
+.awards-page .award-card--featured .award-card__visual img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.awards-page .award-card--featured .award-card__visual span {
+  bottom: 12px;
+  left: 14px;
+  font-size: 10px;
+}
+.awards-page .award-card--featured .award-card__content {
+  grid-column: 2;
+  grid-row: 1;
+  display: block;
+  padding: 0;
+  min-width: 0;
+}
+.awards-page .award-card--featured h3 {
+  font-size: clamp(25px, 2.5vw, 32px);
+  line-height: 1.22;
+  margin-bottom: 16px;
+}
+.awards-page .award-card--featured .award-card__copy > p {
+  font-size: 14px;
+  line-height: 1.8;
+  max-width: 70ch;
+}
+.awards-page .award-card--featured .award-card__details { margin-top: 24px; }
+.awards-page .award-card--featured .award-card__facts { margin-bottom: 18px; }
+.awards-page .award-card--featured .award-card__facts > div { padding: 10px 0; }
+.awards-page .award-card--featured .award-card__gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+}
+.awards-page .award-card--featured .award-card__gallery button {
+  flex: 0 0 112px;
+  width: 112px;
+  height: 72px;
+  aspect-ratio: auto;
+  background: #eef0f0;
+}
+.awards-page .award-card--featured .award-card__gallery img { object-fit: contain; }
+@media (max-width: 991px) {
+  .awards-page .award-card--featured { grid-template-columns: 220px minmax(0, 1fr); gap: 24px; padding: 26px; }
+}
+@media (max-width: 767px) {
+  .awards-page .award-card--featured { display: flex; flex-direction: column; gap: 22px; padding: 24px; }
+  .awards-page .award-card--featured .award-card__content { order: 0; width: 100%; }
+  .awards-page .award-card--featured .award-card__visual { order: 1; width: 220px; max-width: 100%; margin: 0; }
+  .awards-page .award-card--featured h3 { font-size: 27px; }
+}
