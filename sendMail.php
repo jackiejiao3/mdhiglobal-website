@@ -4,29 +4,32 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-//Load Composer's autoloader
-require 'vendor/autoload.php';
-$content_fb = $_POST['Field16'] ? trim($_POST['Field16']) : '';
+function respond($ok, $message, $status = 200) {
+    http_response_code($status);
+    header('Content-Type: application/json; charset=utf-8');
+    echo json_encode(['success' => $ok, 'message' => $message]);
+    exit;
+}
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') respond(false, 'Please submit the contact form.', 405);
+$values = [];
+foreach (['Field2', 'Field3', 'Field4', 'Field5', 'Field6', 'Field8', 'Field16'] as $key) {
+    $values[$key] = isset($_POST[$key]) && is_string($_POST[$key]) ? trim($_POST[$key]) : '';
+    if ($key !== 'Field5' && $values[$key] === '') respond(false, 'Please complete all required fields.', 422);
+}
+if (!filter_var($values['Field4'], FILTER_VALIDATE_EMAIL)) respond(false, 'Please enter a valid email address.', 422);
+if (strlen($values['Field16']) > 4000) respond(false, 'Please shorten your message.', 422);
+if (!file_exists(__DIR__ . '/vendor/autoload.php')) respond(false, 'Sending is currently unavailable. Please email info@mdhiglobal.com.', 503);
+require __DIR__ . '/vendor/autoload.php';
+$email = $values['Field4'];
+$content = '';
+foreach (['Field2'=>'First name', 'Field3'=>'Last name', 'Field4'=>'Email', 'Field5'=>'Phone (optional)', 'Field6'=>'Business type', 'Field8'=>'Enquiry type', 'Field16'=>'Project details'] as $key=>$label) {
+    $content .= $label . ': ' . nl2br(htmlspecialchars($values[$key], ENT_QUOTES, 'UTF-8')) . '<br>';
+}
 if (true) {
-    $first = $_POST['Field2'] ? trim($_POST['Field2']) : '';
-    $last = $_POST['Field3'] ? trim($_POST['Field3']) : '';
-    $email = $_POST['Field4'] ? trim($_POST['Field4']) : '';
-    $phone = $_POST['Field5'] ? trim($_POST['Field5']) : '';
-    $business = $_POST['Field6'] ? trim($_POST['Field6']) : '';
-    $way = $_POST['Field8'] ? trim($_POST['Field8']) : '';
-
-
-    $content .= 'Name:&nbsp;' . $first . '&nbsp;' . $last . '<br>';
-    $content .= 'Email:&nbsp;' . $email . '<br>';
-    $content .= 'Phone:&nbsp;' . $phone . '<br>';
-    $content .= 'Business Type:&nbsp;' . $business . '<br>';
-    $content .= 'Requested:&nbsp;' . $way . '<br>';
-    $content .= 'Message:&nbsp;' . $content_fb . '<br>';
-
-    $mail = new PHPMailer();                              // Passing `true` enables exceptions
+    $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
     try {
         //Server settings
-        $mail->SMTPDebug = 3;                                 // Enable verbose debug output
+        $mail->SMTPDebug = 0;                                 // Enable verbose debug output
         $mail->isSMTP();                                      // Set mailer to use SMTP
         $mail->Host = 'smtp.office365.com';  // Specify main and backup SMTP servers
         $mail->SMTPAuth = true;                               // Enable SMTP authentication
@@ -40,7 +43,9 @@ if (true) {
         $mail->addAddress('info@mdhiglobal.com');              // Name is optional
         //$mail->addAddress('info@mdhiglobal.com');
         //Global Web
-        $mail->addReplyTo('info@mdhiglobal.com', 'Global Web');
+        $mail->addReplyTo($email);
+        $mail->CharSet = 'UTF-8';
+        $mail->Timeout = 20;
 
         //Attachments
         // $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
@@ -50,12 +55,9 @@ if (true) {
         $mail->isHTML(true);                                  // Set email format to HTML
         $mail->Subject = 'Message From MDHI Global Portal';
         $mail->Body = $content;
-        header("location:tips.html");//修改发送成功时的地址 到中转页面提示信息
-        $res = $mail->send();
-        exit();
-    } catch (Exception $e) {
-        header("location:mdhicont.html");
+        if ($mail->send()) respond(true, 'Submitted successfully. Thank you — our team will be in touch.');
+        respond(false, 'Your enquiry could not be sent. Please try again or email info@mdhiglobal.com.', 502);
+    } catch (\Throwable $e) {
+        respond(false, 'Your enquiry could not be sent. Please try again or email info@mdhiglobal.com.', 502);
     }
-} else {
-    header("location:index.html");
 }
