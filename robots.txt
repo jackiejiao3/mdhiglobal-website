@@ -1,0 +1,28 @@
+# robots.txt for mdhiglobal.com
+# Policy decided 2026-11-12: AI crawlers are allowed on public business pages.
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: *
+Allow: /
+Disallow: /caches
+Disallow: /phpcms
+Disallow: /install
+Disallow: /phpsso_server
+Disallow: /api
+Disallow: /admin.php
+
+Sitemap: https://mdhiglobal.com/sitemap.xml
