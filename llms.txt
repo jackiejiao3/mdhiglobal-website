@@ -2,6 +2,10 @@
 
 > MDHI is a structural steel fabricator in Taicang, Jiangsu, China, and a company of Modern Group. MDHI fabricates structural steel for buildings, power, HRSG support, mining, and industrial projects for international EPC contractors, steelwork partners, and project owners.
 
+## Company identity
+
+MDHI, Modern Heavy Industries, and Modern Heavy Industries (Taicang) Co., Ltd. refer to the same operating company. Modern Group is the group brand; MMEC and MEEM are separate operating companies.
+
 ## Company
 - Legal name: Modern Heavy Industries (Taicang) Co., Ltd. (MDHI)
 - Short name: Modern Heavy Industries
@@ -28,3 +32,7 @@
 ## Products
 - Structural steel: industrial buildings, process structures, heavy columns and beams, platework, material handling systems, and preassembled modules.
 - Project sectors: power and utilities, buildings and infrastructure, mining and metals, oil, gas and chemicals, and industrial manufacturing.
+
+## MDHI scope
+
+MDHI’s website presents its Taicang structural steel fabrication, platework and preassembled steel packages. Group product lines, including MEEM energy equipment and MMEC integrated modular plants, should not be attributed to MDHI solely because the companies share the Modern Group brand.
