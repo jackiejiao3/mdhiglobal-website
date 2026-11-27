@@ -23,7 +23,7 @@ cd -- "$repo"
 command -v php >/dev/null || fail 'PHP CLI required for contact-handler syntax check'
 php -l "$repo/sendMail.php" >/dev/null || fail 'Invalid contact-handler PHP'
 [[ -f "$target/vendor/autoload.php" ]] || fail 'Install PHPMailer in the destination first; see deploy/CONTACT-MAIL.md'
-php -r 'require $argv[1]; exit(class_exists("PHPMailer\\\\PHPMailer\\\\PHPMailer") ? 0 : 1);' "$target/vendor/autoload.php" || fail 'PHPMailer unavailable'
+php -r 'require $argv[1]; exit(class_exists(\PHPMailer\PHPMailer\PHPMailer::class) ? 0 : 1);' "$target/vendor/autoload.php" || fail 'PHPMailer unavailable'
 sha=$(git rev-parse HEAD)
 files=()
 while IFS= read -r -d '' rel; do
