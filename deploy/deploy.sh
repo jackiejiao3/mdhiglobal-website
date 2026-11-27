@@ -1,5 +1,5 @@
 #!/bin/bash
-# Publish tracked static website files, preserving server-only files and PHP.
+# Publish static files and the explicitly reviewed contact handler.
 set -Eeuo pipefail
 umask 077
 repo=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd -P)
@@ -19,11 +19,17 @@ done
 cd -- "$repo"
 [[ -z $(git status --porcelain) ]] || fail 'Repository has local modifications; update only through GitHub'
 [[ $(git symbolic-ref --short HEAD) == main ]] || fail 'Deploy the main branch only'
+# Check mail dependencies before replacing any frontend or backend files.
+command -v php >/dev/null || fail 'PHP CLI required for contact-handler syntax check'
+php -l "$repo/sendMail.php" >/dev/null || fail 'Invalid contact-handler PHP'
+[[ -f "$target/vendor/autoload.php" ]] || fail 'Install PHPMailer in the destination first; see deploy/CONTACT-MAIL.md'
+php -r 'require $argv[1]; exit(class_exists("PHPMailer\\\\PHPMailer\\\\PHPMailer") ? 0 : 1);' "$target/vendor/autoload.php" || fail 'PHPMailer unavailable'
 sha=$(git rev-parse HEAD)
 files=()
 while IFS= read -r -d '' rel; do
   [[ "$rel" != /* && "$rel" != *../* ]] || fail "Unsafe tracked path: $rel"
   case "$rel" in
+    sendMail.php) ;;
     *.html) [[ "$rel" != */* ]] || continue ;;
     css/*|js/*|images/*|suyee/*|scripts/*)
       case "${rel,,}" in
@@ -57,7 +63,7 @@ for rel in "${files[@]}"; do
 done
 echo "Commit: $sha"
 echo "Destination: $target"
-echo "Static files: ${#files[@]} (PHP, .htaccess, PDFs and unrelated directories excluded)"
+echo "Static files: ${#files[@]} (sendMail.php included; other PHP, credentials and vendor preserved)"
 if [[ "$mode" == --dry-run ]]; then
   printf '%s\n' "${files[@]}"
   exit 0
