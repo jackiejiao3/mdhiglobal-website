@@ -10,7 +10,8 @@ function respond($ok, $message, $status = 200) {
     echo json_encode(['success' => $ok, 'message' => $message]);
     exit;
 }
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') respond(false, 'Please submit the contact form.', 405);
+header('Cache-Control: no-store');
+if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') respond(false, 'Please submit the contact form.', 405);
 $values = [];
 foreach (['Field2', 'Field3', 'Field4', 'Field5', 'Field6', 'Field8', 'Field16'] as $key) {
     $values[$key] = isset($_POST[$key]) && is_string($_POST[$key]) ? trim($_POST[$key]) : '';
@@ -18,7 +19,7 @@ foreach (['Field2', 'Field3', 'Field4', 'Field5', 'Field6', 'Field8', 'Field16']
 }
 if (!filter_var($values['Field4'], FILTER_VALIDATE_EMAIL)) respond(false, 'Please enter a valid email address.', 422);
 if (strlen($values['Field16']) > 4000) respond(false, 'Please shorten your message.', 422);
-if (!file_exists(__DIR__ . '/vendor/autoload.php')) respond(false, 'Sending is currently unavailable. Please email info@mdhiglobal.com.', 503);
+if (!is_file(__DIR__ . '/vendor/autoload.php')) respond(false, 'Sending is currently unavailable. Please email info@mdhiglobal.com.', 503);
 require __DIR__ . '/vendor/autoload.php';
 $email = $values['Field4'];
 $content = '';
@@ -26,19 +27,33 @@ foreach (['Field2'=>'First name', 'Field3'=>'Last name', 'Field4'=>'Email', 'Fie
     $content .= $label . ': ' . nl2br(htmlspecialchars($values[$key], ENT_QUOTES, 'UTF-8')) . '<br>';
 }
 if (true) {
+    $config = [];
+    $configPath = dirname(__DIR__) . '/mdhi-mail-config.php';
+    if (is_file($configPath)) {
+        $loaded = require $configPath;
+        if (is_array($loaded)) $config = $loaded;
+    }
+    $setting = function ($key, $fallback = '') use ($config) {
+        $value = getenv($key);
+        return $value !== false && $value !== '' ? $value : ($config[$key] ?? $fallback);
+    };
+    if ($setting('MDHI_SMTP_PASSWORD') === '') {
+        error_log('MDHI contact: SMTP configuration missing');
+        respond(false, 'Sending is temporarily unavailable. Please email info@mdhiglobal.com.', 503);
+    }
     $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
     try {
         //Server settings
         $mail->SMTPDebug = 0;                                 // Enable verbose debug output
         $mail->isSMTP();                                      // Set mailer to use SMTP
-        $mail->Host = 'smtp.office365.com';  // Specify main and backup SMTP servers
+        $mail->Host = $setting('MDHI_SMTP_HOST', 'smtp.office365.com');  // Specify main and backup SMTP servers
         $mail->SMTPAuth = true;                               // Enable SMTP authentication
-        $mail->Username = 'modernheavy@outlook.com';                 // SMTP username
-        $mail->Password = getenv('MDHI_SMTP_PASSWORD') ?: '';                           // SMTP password
+        $mail->Username = $setting('MDHI_SMTP_USERNAME', 'modernheavy@outlook.com');                 // SMTP username
+        $mail->Password = $setting('MDHI_SMTP_PASSWORD');                           // SMTP password
         $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
         $mail->Port = 587;                                    // TCP port to connect to
         //Recipients
-        $mail->setFrom('modernheavy@outlook.com', 'Modern Heavy Industries (Taicang) Co., Ltd.');//First field is same with $mail->Username
+        $mail->setFrom($mail->Username, 'Modern Heavy Industries (Taicang) Co., Ltd.');//First field is same with $mail->Username
         // $mail->addAddress('joe@example.net', 'Joe User');     // Add a recipient
         $mail->addAddress('info@mdhiglobal.com');              // Name is optional
         //$mail->addAddress('info@mdhiglobal.com');
@@ -58,6 +73,7 @@ if (true) {
         if ($mail->send()) respond(true, 'Submitted successfully. Thank you — our team will be in touch.');
         respond(false, 'Your enquiry could not be sent. Please try again or email info@mdhiglobal.com.', 502);
     } catch (\Throwable $e) {
+        error_log('MDHI contact: SMTP send failed; exception code ' . $e->getCode());
         respond(false, 'Your enquiry could not be sent. Please try again or email info@mdhiglobal.com.', 502);
     }
 }
