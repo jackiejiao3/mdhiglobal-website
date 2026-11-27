@@ -1,0 +1,17 @@
+name: Contact code checks
+on: [push, pull_request]
+jobs:
+  contact:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: php -l sendMail.php
+      - run: node --check js/contact-form.js
+      - run: bash -n deploy/deploy.sh
+      - name: Validate required fields without SMTP
+        run: |
+          php -S 127.0.0.1:8088 > /tmp/mdhi-php.log 2>&1 &
+          for i in 1 2 3 4 5; do curl -s http://127.0.0.1:8088/sendMail.php >/dev/null && break; sleep 1; done
+          code=$(curl -s -o /tmp/result.json -w '%{http_code}' -X POST http://127.0.0.1:8088/sendMail.php)
+          test "$code" = 422
+          php -r '$r=json_decode(file_get_contents("/tmp/result.json"),true); exit(is_array($r) && $r["success"] === false ? 0 : 1);'
