@@ -1,29 +1,50 @@
 (() => {
+  'use strict';
   const form = document.querySelector('.quote-form');
   if (!form) return;
-  const phone = form.elements.Field5;
-  phone.required = false;
+  form.elements.Field5.required = false;
+  const button = form.querySelector('button[type="submit"]');
+  const status = form.querySelector('.quote-status');
+  let sending = false;
+  function feedback(message, kind) {
+    status.hidden = false;
+    status.className = 'quote-status' + (kind ? ' is-' + kind : '');
+    status.textContent = message;
+  }
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
-    if (!form.reportValidity()) return;
-    const button = form.querySelector('button[type="submit"]');
-    const status = form.querySelector('.quote-status');
+    if (sending || !form.reportValidity()) return;
+    const body = new FormData(form);
+    sending = true;
     button.disabled = true;
-    status.hidden = false;
-    status.className = 'quote-status';
-    status.textContent = 'Sending your enquiry…';
+    feedback('Sending your enquiry…');
     try {
-      const response = await fetch(form.action, {method: 'POST', body: new FormData(form), headers: {'Accept': 'application/json'}});
+      const response = await fetch(form.action, {
+        method: 'POST', body, credentials: 'same-origin', headers: { Accept: 'application/json' }
+      });
+      // A host-level browser challenge is not the mail handler's JSON response.
+      if (response.status === 409 || response.status === 403) {
+        feedback('Our website could not accept this submission. Please email your enquiry to info@mdhiglobal.com.', 'error');
+        return;
+      }
+      if (!(response.headers.get('Content-Type') || '').toLowerCase().includes('application/json')) {
+        feedback('Your enquiry could not be confirmed. Please email info@mdhiglobal.com before submitting again.', 'error');
+        return;
+      }
       const result = await response.json();
-      if (!response.ok || result.success !== true) throw new Error(result.message || 'Sending failed.');
-      status.classList.add('is-success');
-      status.textContent = result.message;
+      if (!response.ok || !result || result.success !== true) {
+        feedback(result && typeof result.message === 'string' ? result.message :
+          'Your enquiry could not be sent. Please email info@mdhiglobal.com.', 'error');
+        return;
+      }
+      feedback(typeof result.message === 'string' ? result.message : 'Your enquiry has been sent. Thank you.', 'success');
       form.reset();
-    } catch (error) {
-      status.classList.add('is-error');
-      status.textContent = 'Your enquiry could not be confirmed. Please try again or email info@mdhiglobal.com.';
+    } catch (_) {
+      feedback('Your enquiry could not be confirmed. Please email info@mdhiglobal.com before submitting again.', 'error');
     } finally {
+      sending = false;
       button.disabled = false;
+
     }
   });
 })();
