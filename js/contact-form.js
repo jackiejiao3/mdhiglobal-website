@@ -5,7 +5,6 @@
   form.elements.Field5.required = false;
   const button = form.querySelector('button[type="submit"]');
   const status = form.querySelector('.quote-status');
-  const captcha = form.querySelector('.g-recaptcha');
   let sending = false;
   function feedback(message, kind) {
     status.hidden = false;
@@ -15,19 +14,7 @@
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
     if (sending || !form.reportValidity()) return;
-    const key = captcha && captcha.getAttribute('data-sitekey');
-    if (!key || key.includes('REPLACE_') || !window.grecaptcha || typeof window.grecaptcha.getResponse !== 'function') {
-      feedback('Verification is unavailable. Please refresh the page or email info@mdhiglobal.com.', 'error');
-      return;
-    }
-    let token;
-    try { token = window.grecaptcha.getResponse(); } catch (_) { token = ''; }
-    if (!token) {
-      feedback('Please complete the verification before submitting.', 'error');
-      return;
-    }
     const body = new FormData(form);
-    body.set('g-recaptcha-response', token);
     sending = true;
     button.disabled = true;
     feedback('Sending your enquiry…');
@@ -57,8 +44,7 @@
     } finally {
       sending = false;
       button.disabled = false;
-      // Tokens are single-use and may already have been consumed on a failed send.
-      try { window.grecaptcha.reset(); } catch (_) { /* Keep the enquiry text. */ }
+
     }
   });
 })();

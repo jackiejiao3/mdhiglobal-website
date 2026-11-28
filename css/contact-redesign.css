@@ -7,5 +7,5 @@
 
 .contact-page .quote-hero{background-image:linear-gradient(90deg,rgba(12,21,28,.84),rgba(12,21,28,.3)),url('../images/contact-factory-v2.svg');background-position:center,center 65%}
 
-.quote-form .quote-verification { margin: 24px 0; }
-.quote-form .quote-verification p, .quote-form .quote-verification noscript { font-size: 14px; line-height: 1.6; }
+
+.quote-form .quote-honeypot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
